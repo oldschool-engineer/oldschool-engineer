@@ -1,6 +1,6 @@
 # 👋 Hello! I'm Tom
 
-[![](https://img.shields.io/badge/-Kuhl_Haus-151515?style=flat&logo=GitHub&logoColor=white)](https://github.com/kuhl-haus) [![](https://img.shields.io/badge/-Thomas_Pounders-0072b1?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thomaspounders) [![](https://img.shields.io/badge/-the.oldschool.engineer-006633?style=flat&logo=medium&logoColor=white)](https://the.oldschool.engineer)
+[![](https://img.shields.io/badge/-Kuhl_Haus-151515?style=flat&logo=GitHub&logoColor=white)](https://github.com/kuhl-haus) [![](https://img.shields.io/badge/-Thomas_Pounders-0072b1?style=flat&logo=inspire&logoColor=white)](https://www.linkedin.com/in/thomaspounders) [![](https://img.shields.io/badge/-the.oldschool.engineer-006633?style=flat&logo=medium&logoColor=white)](https://the.oldschool.engineer)
 
 **Senior Engineering Technical Leader** with 25+ years building and securing enterprise systems at **Amazon/AWS** and **Microsoft**, plus 10 years of **U.S. Navy** Signals Intelligence experience.
 
