@@ -44,6 +44,10 @@ My pinned repositories showcase a **distributed real-time market data system** I
 
 **Active Projects:** Stock market data processing platform (Kuhl Haus MDP) and a site monitoring service named "Magpie".
 
+## 😄 Side Project: Random Dad Jokes
+
+Sometimes the best way to learn is to build something fun. [ur.janky.click](https://ur.janky.click/) is a single-page dad joke app I built in an hour—100% HTML, GitHub Pages hosting, custom domain, API integration, and zero JavaScript frameworks. It's a practical demonstration of how far you can go with intentional simplicity. Read about the [build process and technical choices](https://blog.cubed.run/automating-laughter-building-a-random-dad-joke-site-in-an-hour-dc35e0627674?sk=13523e5b1b39168201f0383a32d77b36) that made it possible.
+
 ## 📝 Technical Writing
 
 I document my engineering journey at [the.oldschool.engineer](https://the.oldschool.engineer):
