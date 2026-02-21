@@ -34,7 +34,15 @@ My pinned repositories showcase a **distributed real-time market data system** I
 | [kuhl-haus-mdp-app](https://github.com/kuhl-haus/kuhl-haus-mdp-app) | Frontend & service control plane |
 | [kuhl-haus-mdp-deployment](https://github.com/kuhl-haus/kuhl-haus-mdp-deployment) | Kubernetes & Ansible automation |
 
-**Tech stack:** Kubernetes • Redis • RabbitMQ • FastAPI • py4web • OAuth 2.0 • OpenTelemetry 
+**Tech stack:** Kubernetes • Redis • RabbitMQ • FastAPI • py4web • OAuth 2.0 • OpenTelemetry
+
+## 🏠 Kuhl Haus Organization
+
+[Kuhl Haus](https://github.com/kuhl-haus) is my open-source organization dedicated to transforming practical home automation and infrastructure projects into community tools. What started as building a robust home lab has evolved into a collection of MIT-licensed packages available on GitHub.
+
+**Philosophy:** Ship production-quality code with comprehensive tests, documentation, and real-world application examples. Every project includes CI/CD pipelines, code coverage, and security scanning.
+
+**Active Projects:** Stock market data processing platform (Kuhl Haus MDP) and a site monitoring service named "Magpie".
 
 ## 📝 Technical Writing
 
