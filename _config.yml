@@ -1,5 +1,6 @@
 # Theme
 remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "dark"
 
 # Site Settings
 locale: "en-US"
@@ -45,9 +46,14 @@ footer:
       icon: "fas fa-fw fa-pen-nib"
       url: "https://the.oldschool.engineer"
 
+# Disable service worker (not needed for a profile site)
+atom_feed:
+  hide: true
+
 # Plugins
 plugins:
   - jekyll-remote-theme
+  - jekyll-include-cache
 
 # Defaults — apply layout and options to pages without requiring front matter
 # (front matter in README.md would show as raw text on the GitHub profile)
@@ -59,3 +65,7 @@ defaults:
       author_profile: true
       toc: true
       toc_sticky: true
+  - scope:
+      path: "README.md"
+    values:
+      title: " "

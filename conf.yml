@@ -1,0 +1,5 @@
+---
+---
+url: "{{ site.url }}"
+baseurl: "{{ site.baseurl }}"
+title: "{{ site.title }}"
