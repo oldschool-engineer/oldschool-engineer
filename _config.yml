@@ -1,0 +1,61 @@
+# Theme
+remote_theme: mmistakes/minimal-mistakes
+
+# Site Settings
+locale: "en-US"
+title: "Tom Pounders"
+subtitle: "Senior Engineering Technical Leader"
+name: "Tom Pounders"
+description: >-
+  Senior Engineering Technical Leader with 25+ years building and securing
+  enterprise systems at Amazon/AWS and Microsoft.
+url: "https://oldschool-engineer.dev"
+baseurl: ""
+
+# Author (shown in sidebar)
+author:
+  name: "Tom Pounders"
+  bio: >-
+    25+ years building and securing enterprise systems at Amazon/AWS
+    and Microsoft. 10 years U.S. Navy Signals Intelligence.
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/oldschool-engineer"
+    - label: "Kuhl Haus"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/kuhl-haus"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/thomaspounders"
+    - label: "Blog"
+      icon: "fas fa-fw fa-pen-nib"
+      url: "https://the.oldschool.engineer"
+
+# Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/oldschool-engineer"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/thomaspounders"
+    - label: "Blog"
+      icon: "fas fa-fw fa-pen-nib"
+      url: "https://the.oldschool.engineer"
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+
+# Defaults — apply layout and options to pages without requiring front matter
+# (front matter in README.md would show as raw text on the GitHub profile)
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "single"
+      author_profile: true
+      toc: true
+      toc_sticky: true

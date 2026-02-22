@@ -1,0 +1,7 @@
+main:
+  - title: "Home"
+    url: /
+  - title: "Blog"
+    url: https://the.oldschool.engineer
+  - title: "GitHub"
+    url: https://github.com/oldschool-engineer
