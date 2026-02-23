@@ -46,13 +46,13 @@ My pinned repositories showcase a **distributed real-time market data system** I
 
 ## 😄 Side Project: Random Dad Jokes
 
-Sometimes the best way to learn is to build something fun. [ur.janky.click](https://ur.janky.click/) is a single-page dad joke app I built in an hour—100% HTML, GitHub Pages hosting, custom domain, API integration, and zero JavaScript frameworks. It's a practical demonstration of how far you can go with intentional simplicity. Read about the [build process and technical choices](https://blog.cubed.run/automating-laughter-building-a-random-dad-joke-site-in-an-hour-dc35e0627674?sk=13523e5b1b39168201f0383a32d77b36) that made it possible.
+Sometimes the best way to learn is to build something fun. [ur.janky.click](https://ur.janky.click/) is a single-page dad joke app I built in an hour—100% HTML, GitHub Pages hosting, custom domain, API integration, and zero JavaScript frameworks. It's a practical demonstration of how far you can go with intentional simplicity. Read about the [build process and technical choices](https://blog.cubed.run/automating-laughter-building-a-random-dad-joke-site-in-an-hour-dc35e0627674) that made it possible.
 
 ## 📝 Technical Writing
 
 I document my engineering journey at [the.oldschool.engineer](https://the.oldschool.engineer):
 
-- [What I Built After Quitting Amazon](https://the.oldschool.engineer/28fc3b6d9be0?sk=37671a98e71059e0c635c4f15c56f5ff) — 5-part series on building production-grade distributed systems
+- [What I Built After Quitting Amazon](https://the.oldschool.engineer/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-28fc3b6d9be0) — 5-part series on building production-grade distributed systems
 
 ## 💡 What Drives Me
 
