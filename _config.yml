@@ -1,8 +1,13 @@
-# Theme
+# Minimal Mistakes Theme
+# https://mmistakes.github.io/minimal-mistakes/docs/configuration/
 remote_theme: mmistakes/minimal-mistakes
+
+# Skins: default, air, aqua, contrast, dark, dirt, mint, neon, plum, sunrise
+# https://mmistakes.github.io/minimal-mistakes/docs/configuration/#skin
 minimal_mistakes_skin: "dark"
 
 # Site Settings
+# https://mmistakes.github.io/minimal-mistakes/docs/configuration/#site-settings
 locale: "en-US"
 title: "Tom Pounders"
 subtitle: "Senior Engineering Technical Leader"
@@ -14,11 +19,13 @@ url: "https://oldschool-engineer.dev"
 baseurl: ""
 
 # Author (shown in sidebar)
+# https://mmistakes.github.io/minimal-mistakes/docs/authors/
 author:
   name: "Tom Pounders"
   bio: >-
     25+ years building and securing enterprise systems at Amazon/AWS
     and Microsoft. 10 years U.S. Navy Signals Intelligence.
+  # Icon names from Font Awesome 5: https://fontawesome.com/v5/search
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -31,9 +38,13 @@ author:
       url: "https://www.linkedin.com/in/thomaspounders"
     - label: "Blog"
       icon: "fas fa-fw fa-pen-nib"
+      url: "https://oldschool-engineer.dev/blog"
+    - label: "Medium"
+      icon: "fab fa-fw fa-medium"
       url: "https://the.oldschool.engineer"
 
 # Footer
+# https://mmistakes.github.io/minimal-mistakes/docs/configuration/#site-footer
 footer:
   links:
     - label: "GitHub"
@@ -44,19 +55,28 @@ footer:
       url: "https://www.linkedin.com/in/thomaspounders"
     - label: "Blog"
       icon: "fas fa-fw fa-pen-nib"
+      url: "https://oldschool-engineer.dev/blog"
+    - label: "Medium"
+      icon: "fab fa-fw fa-medium"
       url: "https://the.oldschool.engineer"
 
-# Disable service worker (not needed for a profile site)
+# Atom feed (RSS) — generates /feed.xml automatically from Jekyll posts
+# https://github.com/jekyll/jekyll-feed
 atom_feed:
-  hide: true
+  hide: false
 
 # Plugins
+# GitHub Pages supported plugins: https://pages.github.com/versions/
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
+  - jekyll-feed
 
-# Defaults — apply layout and options to pages without requiring front matter
-# (front matter in README.md would show as raw text on the GitHub profile)
+# Front matter defaults — apply layout and options without requiring
+# front matter in each file. README.md specifically must not have front
+# matter or it will render as raw text on the GitHub profile.
+# https://jekyllrb.com/docs/configuration/front-matter-defaults/
+# https://mmistakes.github.io/minimal-mistakes/docs/configuration/#front-matter-defaults
 defaults:
   - scope:
       path: ""
@@ -69,3 +89,16 @@ defaults:
       path: "README.md"
     values:
       title: " "
+  # Post defaults — these values apply to all files in _posts/
+  # https://mmistakes.github.io/minimal-mistakes/docs/posts/
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "single"
+      author_profile: true
+      read_time: true
+      share: true
+      related: true
+      toc: true
+      toc_sticky: true
