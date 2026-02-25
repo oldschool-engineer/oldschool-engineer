@@ -56,8 +56,35 @@ I document my engineering journey at [the.oldschool.engineer](https://the.oldsch
 
 ## 💡 What Drives Me
 
-I believe in **intentional simplicity**—building systems that solve real problems without over-engineering. Check out [this post-mortem](https://github.com/kuhl-haus/kuhl-haus-mdp/issues/3) for an example of how I approach debugging and quality.
+I believe in **intentional simplicity**—building systems that solve real problems without
+over-engineering. Check out [this post-mortem](https://github.com/kuhl-haus/kuhl-haus-mdp/issues/3)
+for an example of how I approach debugging and quality.
+
+## 🤔 Why "oldschool-engineer"?
+
+**oldschool-engineer** wasn't a name I picked — it was given to me. I was leading an
+engineering team in AWS EC2 when my team discovered I run what is, by any honest measure,
+a home data center — a 13-node Proxmox cluster in a 42U rack, triple-redundant Internet,
+and my own on-prem cloud. I gave a tech talk about it. When I got to the part about
+building my own certified 10Gbps ethernet cables from raw spools of CAT6A — measured, cut,
+terminated, tested, and dressed to spec — one of my engineers just stopped me:
+
+> *"Whoa. You're like a real, serious, 'old school' engineer. You were building Internet
+> services before the cloud existed."*
+
+The DNS domains were available. Done.
+
+Damn right. I'm the Oldschool Engineer.
+
+*Yes, "oldschool-engineer," "old school," and "Oldschool" are all used differently here.
+Merriam-Webster says it should be "old-school," but I'm a DNS nerd, not an English teacher.
+In a domain name, a hyphen or period naturally replaces a space — so "oldschool engineer" becomes
+`oldschool-engineer.dev` or `oldschool.engineer` and that's perfectly clean. But follow Merriam-Webster's
+hyphenation and you get `old-school-engineer.dev` or `old-school.engineer` — and
+nobody wants to live with that. So "oldschool" it is. Roll with it.*
 
 ---
 
-*Looking for someone who can architect secure, scalable systems and ship production code? Let's connect.*
+_Looking for someone who can architect secure, scalable systems and ship production code?
+Let's connect._
+
