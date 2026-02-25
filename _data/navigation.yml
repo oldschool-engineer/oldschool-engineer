@@ -3,6 +3,10 @@ main:
     url: /
   - title: "Blog"
     url: /blog
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
   - title: "Medium"
     url: https://the.oldschool.engineer
   - title: "GitHub"

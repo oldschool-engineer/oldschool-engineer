@@ -2,3 +2,21 @@
 <!-- https://www.goatcounter.com -->
 <script data-goatcounter="https://oldschool-engineer.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
+<!-- Mermaid — render diagrams in markdown code blocks -->
+<!-- https://mermaid.js.org/intro/ -->
+<!-- Usage: wrap diagram syntax in ```mermaid code fences -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "dark"
+    });
+    // Convert <code class="language-mermaid"> blocks into mermaid divs
+    document.querySelectorAll("code.language-mermaid").forEach(function (el) {
+      var container = el.parentElement;
+      container.outerHTML = '<div class="mermaid">' + el.textContent + "</div>";
+    });
+  });
+</script>

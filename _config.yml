@@ -71,6 +71,13 @@ plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Search — client-side via Lunr.js, no server required
+# https://mmistakes.github.io/minimal-mistakes/docs/configuration/#site-search
+search: true
+search_full_content: true
 
 # Front matter defaults — apply layout and options without requiring
 # front matter in each file. README.md specifically must not have front
@@ -91,6 +98,13 @@ defaults:
       title: " "
   # Post defaults — these values apply to all files in _posts/
   # https://mmistakes.github.io/minimal-mistakes/docs/posts/
+  #
+  # Canonical URLs: jekyll-seo-tag automatically generates
+  # <link rel="canonical"> using site.url + page.url for every post.
+  # To override on a specific post, add to its front matter:
+  #   canonical_url: "https://some-other-url.com/original-post"
+  # When cross-posting to Medium, use their import tool — it reads
+  # the canonical tag from the source and sets it automatically.
   - scope:
       path: ""
       type: "posts"
