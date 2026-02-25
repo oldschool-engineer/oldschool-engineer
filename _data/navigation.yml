@@ -2,7 +2,7 @@ main:
   - title: "Home"
     url: /
   - title: "Blog"
-    url: /blog/
+    url: /blog
   - title: "Medium"
     url: https://the.oldschool.engineer
   - title: "GitHub"
