@@ -18,7 +18,7 @@ tags:
 
 Earlier this year, [I wrote about reducing my AWS costs through a hybrid-cloud approach]({% post_url 2025-03-18-using-hybrid-cloud-to-cost-optimize-ai-workloads %}). The core insight: the majority of my AWS costs came from compute (Lambda) usage, while the AI “heavy lifting” performed by AWS Bedrock constituted only 5% of my costs. By moving compute on-premises, I reduced costs significantly. However, maintaining the on-premises software stack proved more expensive than anticipated.
 
-#### **The Solution That Wasn’t**
+### The Solution That Wasn't
 
 Problems with the on-premises solution:
 

@@ -21,7 +21,7 @@ I prompted a chatbot to behave like a fictional half-Vulcan from a popular scien
 
 *You have indeed lost that loving feeling. The odds of regaining it are statistically insignificant.*
 
-#### OK, But, Why?
+### OK, But, Why?
 
 So what’s the point of having bullshit conversations with a chat bot?
 
