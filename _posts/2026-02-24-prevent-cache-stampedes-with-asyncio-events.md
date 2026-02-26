@@ -17,7 +17,7 @@ tags:
 
 *My miniature nano cow stampeding herd, heading straight for Redis at market open. Every. Single. Morning.*
 
-[Wave 1 is done.]({% post_url 2026-02-24-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-5 %}) The second I shipped it, I turned to the thing quietly living on my mental whiteboard: a cache-miss stampede in the MarketDataCache (MDC).
+[Wave 1 is done.]({% post_url 2026-02-23-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-5 %}) The second I shipped it, I turned to the thing quietly living on my mental whiteboard: a cache-miss stampede in the MarketDataCache (MDC).
 
 Quick disambiguation: [I mentioned a stampeding herd in an earlier post]({% post_url 2026-02-11-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-4 %}) — that was a message backpressure mechanism rendered useless problem. This is a different herd. Same name, different cattle.
 

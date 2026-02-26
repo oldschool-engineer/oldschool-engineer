@@ -17,7 +17,7 @@ tags:
 - [Part 2: How to Run It]({% post_url 2026-01-21-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2 %})  
 - [Part 3: How to Deploy It]({% post_url 2026-01-31-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3 %})  
 - Part 4: Evolution from Prototype to Production (you are here)  
-- [Part 5: Bugs, Bottlenecks, and Breaking 1,000 msg/s]({% post_url 2026-02-24-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-5 %})
+- [Part 5: Bugs, Bottlenecks, and Breaking 1,000 msg/s]({% post_url 2026-02-23-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-5 %})
 
 ### Introduction
 
