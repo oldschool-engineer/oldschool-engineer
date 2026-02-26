@@ -9,19 +9,19 @@ tags:
   - prompt-engineering
 ---
 
-Explore my humorous chats with “Fake Spock” — a Vulcan-inspired AI on my home Mattermost server who delivers logic and dad jokes on demand.
+Explore my humorous chats with “Fake Spock” — a Vulcan-inspired AI on my home Mattermost server who delivers logic and dad jokes on demand.
 
-I prompted a chatbot to behave like a fictional half-Vulcan from a popular science fiction series. Meet “Fake Spock (@spock)” — my logical AI companion who specializes in dad jokes. Below are some of our most entertaining exchanges, plus the exact recipe to create your own.
+I prompted a chatbot to behave like a fictional half-Vulcan from a popular science fiction series. Meet “Fake Spock (@spock)” — my logical AI companion who specializes in dad jokes. Below are some of our most entertaining exchanges, plus the exact recipe to create your own.
 
-![Fake Spock runs a system diagnostic to identify the cause of his apparent forgetfulness — evidently, he didn’t forget, he was just being rhetorical.](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-01.png)
+![Fake Spock runs a system diagnostic to identify the cause of his apparent forgetfulness — evidently, he didn’t forget, he was just being rhetorical.](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-01.png)
 
-*Fake Spock runs a system diagnostic to identify the cause of his apparent forgetfulness — evidently, he didn’t forget, he was just being rhetorical.*
+*Fake Spock runs a system diagnostic to identify the cause of his apparent forgetfulness — evidently, he didn’t forget, he was just being rhetorical.*
 
 ![You have indeed lost that loving feeling. The odds of regaining it are statistically insignificant.](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-02.png)
 
 *You have indeed lost that loving feeling. The odds of regaining it are statistically insignificant.*
 
-#### OK, But, Why?
+#### OK, But, Why?
 
 So what’s the point of having bullshit conversations with a chat bot?
 
@@ -35,11 +35,11 @@ I really don’t know why I didn’t use a default bot for testing or what my in
 
 The responses were typically dull, but sometimes I found them humorous, so I figured Fake Spock could use a little more encouragement.
 
-### Encouraging Fake Spock to Tell Dad Jokes
+### Encouraging Fake Spock to Tell Dad Jokes
 
 ![I definitely need to tweak your prompt.](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-03.png)
 
-*I definitely need to tweak your prompt.*
+*I definitely need to tweak your prompt.*
 
 Fake Spock was a little too serious and needed encouragement to fully embrace telling dad jokes. Though promising to do better in the future, it only lasts for the current thread. In order for these changes to be permanent, I need to tweak his prompt. That requires a little bit of trial and error, which is what I used the “piña colada” thread for. That’s the reason why my comments are edited in this thread. In the initial version, I was trying different things to see what worked best. After editing my comment, I hit the ‘Regenerate’ button to see what came out.
 
@@ -51,7 +51,7 @@ Once I was happy with the result, I stopped tweaking, so now he’s primed and r
 
 ![Dude, that Vulcan dad joke was money.](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-05.png)
 
-*Dude, that Vulcan dad joke was money.*
+*Dude, that Vulcan dad joke was money.*
 
 ![Logical Analysis of the Woodchuck Problem](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-06.png)
 
@@ -60,7 +60,7 @@ Once I was happy with the result, I stopped tweaking, so now he’s primed and r
 The differences between the V1 Fake Spock and V2 Fake Spock are:
 
 1. Changed model from Claude 3.5 Haiku to Claude 3.7 Sonnet
-2. Added the following text after the first paragraph in the prompt: *Word play such as assonance, alliteration, onomatopoeia, portmanteau, gibberish, jive, and out-of-character slang and pop-culture references — those are precise opportunities to deliver deftly timed “Dad jokes”.*
+2. Added the following text after the first paragraph in the prompt: *Word play such as assonance, alliteration, onomatopoeia, portmanteau, gibberish, jive, and out-of-character slang and pop-culture references — those are precise opportunities to deliver deftly timed “Dad jokes”.*
 
 ### Technical Details
 
@@ -80,7 +80,7 @@ Getting it to play along while assuming the Spock persona was a little more of a
 
 > Your name is Spock. You are not the same Spock from Star Trek. You are an advanced AI that is so technically superior to Data, from Star Trek Next Generation, that Data looks like an imbecile.
 
-Now, I’ve convinced the bot that it is so damn smart, every response reads like a lecture. It just rambles on and on and won’t STFU. So, the next thing I needed to address was the big wall of text responses that I was getting — no formatting and long as hell.
+Now, I’ve convinced the bot that it is so damn smart, every response reads like a lecture. It just rambles on and on and won’t STFU. So, the next thing I needed to address was the big wall of text responses that I was getting — no formatting and long as hell.
 
 > Use formatting (headers, bold, italics, underlining, bullets) and white space to make it easy to read and easy to spot the most important points while skimming and scanning.
 
@@ -92,13 +92,13 @@ Once I had that all figured out, it was time to enable a sense of humor in the f
 
 … and then encourage proactive joke telling.
 
-> Word play such as assonance, alliteration, onomatopoeia, portmanteau, gibberish, jive, and out-of-character slang and pop-culture references — those are precise opportunities to deliver deftly timed “Dad jokes”.
+> Word play such as assonance, alliteration, onomatopoeia, portmanteau, gibberish, jive, and out-of-character slang and pop-culture references — those are precise opportunities to deliver deftly timed “Dad jokes”.
 
 ![Highlighted and annotated prompt explaining the parts that are responsible for Fake Spock’s behavior.](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-07.png)
 
 ### Closing Thoughts
 
-#### The Simple Joy
+#### The Simple Joy
 
 At the end of the day, there’s no profound reason for creating a Vulcan chatbot that tells dad jokes. And maybe that’s the point. In our quest for practical applications and productivity gains from AI, sometimes it’s refreshing to build something purely because it makes you smile. Live long and prompt, indeed.
 

@@ -12,30 +12,30 @@ tags:
   - hybrid-cloud
 ---
 
-#### Self-hosting LiteLLM, Langflow, and Khoj for maximum flexibility
+***Self-hosting LiteLLM, Langflow, and Khoj for maximum flexibility***
 
 ![](/assets/images/posts/from-aws-lock-in-to-llm-freedom-building-a-cost-effective-hybrid-cloud-ai-stack/img-01.png)
 
 Earlier this year, [I wrote about reducing my AWS costs through a hybrid-cloud approach]({% post_url 2025-03-18-using-hybrid-cloud-to-cost-optimize-ai-workloads %}). The core insight: the majority of my AWS costs came from compute (Lambda) usage, while the AI “heavy lifting” performed by AWS Bedrock constituted only 5% of my costs. By moving compute on-premises, I reduced costs significantly. However, maintaining the on-premises software stack proved more expensive than anticipated.
 
-#### **The Solution That Wasn’t**
+#### **The Solution That Wasn’t**
 
 Problems with the on-premises solution:
 
 * The Bedrock Proxy API implementation is incomplete and does not support all OpenAI API calls. Implementing all missing APIs is non-trivial.
 * Dependencies on AWS Secrets Manager, Key Management Services, and Systems Manager Parameter Store cost $0.32 per day.
 
-Replacing AWS dependencies? Easy — maybe a day of work. Implementing full OpenAI API support? That’s a different story. It would require significant upfront development and constant maintenance every time OpenAI updates their API.
+Replacing AWS dependencies? Easy — maybe a day of work. Implementing full OpenAI API support? That’s a different story. It would require significant upfront development and constant maintenance every time OpenAI updates their API.
 
 I actually started building this, but quickly realized I was signing up for endless maintenance work. That’s a fool’s errand, so I abandoned the approach.
 
 If you’re curious about my implementation before I archived it, you can check out the repos where I split the front-end API and Bedrock adapter: [here](https://github.com/kuhl-haus/kuhl-haus-bedrock-api) and [here](https://github.com/kuhl-haus/kuhl-haus-bedrock-app)
 
-### Back to the drawing board
+### Back to the drawing board
 
 #### **Defining the Requirements**
 
-What problem am I trying to solve? I want a **self-hosted** piece of software that presents an OpenAI-compatible API while routing requests to arbitrary LLM providers. This would unlock compatibility between OpenAI-only tools (which are numerous) and any LLM — including self-hosted models and Anthropic’s offerings on AWS Bedrock.
+What problem am I trying to solve? I want a **self-hosted** piece of software that presents an OpenAI-compatible API while routing requests to arbitrary LLM providers. This would unlock compatibility between OpenAI-only tools (which are numerous) and any LLM — including self-hosted models and Anthropic’s offerings on AWS Bedrock.
 
 **A Note on Motivation**
 
@@ -52,7 +52,7 @@ I considered two options: extend the project and contribute back via pull reques
 
 #### Introducing, LiteLLM
 
-LiteLLM solved everything. I genuinely wish I had known about it a year or two ago — it would have saved me from building custom solutions. Their [Docker and Kubernetes deployment docs](https://docs.litellm.ai/docs/proxy/deploy) got me up and running in minutes, and since it checked all my boxes while working perfectly with my existing Kubernetes and Ansible setup, I stopped searching.
+LiteLLM solved everything. I genuinely wish I had known about it a year or two ago — it would have saved me from building custom solutions. Their [Docker and Kubernetes deployment docs](https://docs.litellm.ai/docs/proxy/deploy) got me up and running in minutes, and since it checked all my boxes while working perfectly with my existing Kubernetes and Ansible setup, I stopped searching.
 
 [**LiteLLM**  
 *LLM Gateway (OpenAI Proxy) to manage authentication, loadbalancing, and spend tracking across 100+ LLMs. All in the…*www.litellm.ai](https://www.litellm.ai/ "https://www.litellm.ai/")
@@ -875,9 +875,9 @@ prod:
     replication_password: "{{ litellm_prod_replication_password }}"
 ```
 
-### But wait, there’s more!
+### But wait, there’s more!
 
-LangFlow — OMG, this is exactly what I needed! This is definitely worth checking out if you’re into building Agentic workflow. The easiest way to get started (in my opinion) is with [Langflow for Desktop](https://www.langflow.org/desktop).
+LangFlow — OMG, this is exactly what I needed! This is definitely worth checking out if you’re into building Agentic workflow. The easiest way to get started (in my opinion) is with [Langflow for Desktop](https://www.langflow.org/desktop).
 
 [**Langflow | Low-code AI builder for agentic and RAG applications**  
 *Langflow is a low-code AI builder for agentic and retrieval-augmented generation (RAG) apps. Code in Python and use any…*www.langflow.org](https://www.langflow.org/ "https://www.langflow.org/")
@@ -885,9 +885,9 @@ LangFlow — OMG, this is exactly what I needed! This is definitely worth ch
 [**What is Langflow? | Langflow Documentation**  
 *Langflow is an open-source, Python-based, customizable framework for building AI applications.*docs.langflow.org](https://docs.langflow.org/ "https://docs.langflow.org/")
 
-Deploying Langflow is significantly more involved, however, because my flows depend on additional services: a vector database, external chat memory, and similar infrastructure components. I deploy everything as containers via Kubernetes, managing the deployment through a GitHub repository — no custom Langflow code or components, just a collection of Ansible manifests and bash scripts orchestrated by a GoCD pipeline-as-code setup. The deployment code isn’t useful to share since it’s specific to my infrastructure configuration.
+Deploying Langflow is significantly more involved, however, because my flows depend on additional services: a vector database, external chat memory, and similar infrastructure components. I deploy everything as containers via Kubernetes, managing the deployment through a GitHub repository — no custom Langflow code or components, just a collection of Ansible manifests and bash scripts orchestrated by a GoCD pipeline-as-code setup. The deployment code isn’t useful to share since it’s specific to my infrastructure configuration.
 
-### Self-Hosted Chat Bot
+### Self-Hosted Chat Bot
 
 Earlier this year, I made a post about [my asinine conversations with “fake Spock” on my self-hosted Mattermost server]({% post_url 2025-03-10-live-long-and-prompt-tales-from-the-ai-enterprise %}). While the copilot AI plug-in is cool, there’s a prompt embedded in its logic that is a challenge to overcome. Rather than fight with a chatbot designed for Mattermost, I found an open-source, self-hostable service for a personal chat bot. Now I have two personal chatbots! Perfect! 2 > 0 > 1 (Amazon employees will recognize that mathematically inaccurate expression as “**Two is better than none, and none is better than one”.**)
 

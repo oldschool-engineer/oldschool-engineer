@@ -11,18 +11,18 @@ tags:
   - automation
 ---
 
-TLS certificates can get expensive. However, I can obtain as many TLS certificates as I want, for free, simply by automating the process. The only catch — the certificates expire in 90 days. I can live with that.
+TLS certificates can get expensive. However, I can obtain as many TLS certificates as I want, for free, simply by automating the process. The only catch — the certificates expire in 90 days. I can live with that.
 
 ![](/assets/images/posts/how-i-do-tls-on-the-cheap/img-01.png)
 
-*Photo by AltumCode on Unsplash*
+*Photo by AltumCode on Unsplash*
 
 ***Caveat****: This solution is for on-premises hosting. If you’re running in AWS, use AWS Certificate Manager. It costs the same but it is easier to implement.*
 
 ### Ingredients
 
 1. [Certbot Route 53 plugin](https://certbot-dns-route53.readthedocs.io/en/stable/)
-2. [Route53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html) — cheap domain names
+2. [Route53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html) — cheap domain names
 3. [GoCD](https://docs.gocd.org/current/)
 4. Bash
 
@@ -30,7 +30,7 @@ My approach depends on: AWS Route53 to host DNS; the Route 53 certbot plugin to 
 
 Let’s examine each of the items, one by one.
 
-### Certbot Route 53 Plugin
+### Certbot Route 53 Plugin
 
 The [default instructions for using certbot](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal&tab=standard) requires an already running webserver, exposed to the Internet, on port 80. I have services running inside my firewall that I have no intention of exposing to the Internet so that’s a non-starter for me. However, the [wildcard instructions](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal&tab=wildcard) only requires DNS. That, I can do. Awesome! I’m a huge fan of [ACME](https://en.wikipedia.org/wiki/Automatic_Certificate_Management_Environment) for this reason.
 
@@ -57,7 +57,7 @@ Constraints:
 
 I dealt with the first two constraints by using Route 53. The third one… that’s where GoCD comes in. More on that in a bit. First, let’s address the elephant in the room. AWS isn’t free and neither is DNS registration. How much is this going to cost?
 
-### Route53 — Cheap Domain Names
+### Route53 — Cheap Domain Names
 
 Most DNS domains cost less than $100/year to register but for my purposes, I’m looking for as cheap as possible. According to the [Route 53 Domain Registration Pricing Sheet](https://d32ze2gidvkk54.cloudfront.net/Amazon_Route_53_Domain_Registration_Pricing_20140731.pdf), the following domains cost less than $10/year:
 
@@ -71,7 +71,7 @@ Most DNS domains cost less than $100/year to register but for my purposes, I’m
 * `.org.uk`: $9
 * `.uk`: $9
 
-For doing things on the cheap, `.click` and `.link` at $3 and $5, respectively, is where it’s at. Now how about that Route 53 hosted zone?
+For doing things on the cheap, `.click` and `.link` at $3 and $5, respectively, is where it’s at. Now how about that Route 53 hosted zone?
 
 Route 53 Authoritative DNS charges for storage (i.e., the zone and its records) and queries. According to the [Route 53 pricing page](https://aws.amazon.com/route53/pricing/), it costs $0.50 per hosted zone for the first 25 zones and $0.40 per million queries for the first 1 billion queries.
 
@@ -81,12 +81,12 @@ OK, so it is a good assumption that will be less than a $1 a month, for me, so I
 
 Bottom line cost:
 
-* $15/year for `.click`
-* $18/year for `.link`
+* $15/year for `.click`
+* $18/year for `.link`
 
 After including tax, that’s less $20/year for either option. To me, that’s pretty cheap considering that the price is not affected by the number of certificates requested/issued.
 
-### Automation via GoCD
+### Automation via GoCD
 
 I use GoCD, an open-source Continuous Integration and Continuous Delivery (CI/CD) system, combined with GitHub to orchestrate the majority of my automation tasks. GoCD’s Pipeline As Code (PAC) feature and custom Bash scripts are the two main components that power my implementation.
 
@@ -132,7 +132,7 @@ Content-Type: application/vnd.go.cd.v1+json; charset=utf-8
 
 Use the value of encrypted\_value in your YAML configuration.
 
-#### Pipeline As Code (PAC)
+#### Pipeline As Code (PAC)
 
 I utilize the YAML config plugin for my implementation. While it may not be the most expressive language, it gets the job done, and it is free and open-source. The key is using GoCD’s encryption to securely store the API credentials. There are other options available, such as using Secrets Management plugins, but this approach is simple and relatively secure, especially when used with private repositories.
 
@@ -238,7 +238,7 @@ For more details, refer to the following resources:
 * **YAML Config Plugin**: [tomzo/gocd-yaml-config-plugin](https://github.com/tomzo/gocd-yaml-config-plugin)
 * **Configuration Reference**: <https://docs.gocd.org/current/configuration/configuration_reference.html>
 
-### A Dash of Bash
+### A Dash of Bash
 
 To complement the Pipeline As Code (PAC) orchestration, I leverage custom Bash scripts for the granular automation tasks.
 
@@ -246,7 +246,7 @@ The key is using PAC-injected environment variables to make the certificate scri
 
 After the certificate update, I run application-specific smoke tests as part of the pipeline. This ensures the updated certificates are properly configured and the app is functioning as expected after deploying the changes.
 
-By bridging the high-level pipeline and low-level system tasks with Bash, I automate the end-to-end certificate lifecycle — from initial provisioning to periodic renewal — while verifying application health. This approach allows me to update certificates independently from application code while using the same smoke test scripts that I use when I deploy the application.
+By bridging the high-level pipeline and low-level system tasks with Bash, I automate the end-to-end certificate lifecycle — from initial provisioning to periodic renewal — while verifying application health. This approach allows me to update certificates independently from application code while using the same smoke test scripts that I use when I deploy the application.
 
 ```python
 #!/bin/bash  
@@ -350,14 +350,14 @@ echo "EOF"
 
 ### Final Thoughts
 
-I run almost everything in containers, which provides process-level isolation between my web server and the processes running on the host. This keeps the API credentials out of the web server’s environment, though it doesn’t protect against a container breakout scenario where the container is compromised — a different problem to address.
+I run almost everything in containers, which provides process-level isolation between my web server and the processes running on the host. This keeps the API credentials out of the web server’s environment, though it doesn’t protect against a container breakout scenario where the container is compromised — a different problem to address.
 
-By leveraging the Certbot Route 53 plugin, AWS Route 53 for cheap domain registration and DNS hosting, and the GoCD automation platform, I’m able to automate the entire TLS certificate lifecycle — from initial provisioning to periodic renewal.
+By leveraging the Certbot Route 53 plugin, AWS Route 53 for cheap domain registration and DNS hosting, and the GoCD automation platform, I’m able to automate the entire TLS certificate lifecycle — from initial provisioning to periodic renewal.
 
 The key aspects of my solution include:
 
 1. Leveraging the Certbot Route 53 plugin: This allows me to handle the ACME DNS challenge, keeping my web servers safely behind a firewall without direct internet exposure.
-2. Selecting inexpensive domains from Route 53: By choosing top-level domains like .click and .link, I’m able to minimize the annual costs for domain registration, with each costing less than $20 per year.
+2. Selecting inexpensive domains from Route 53: By choosing top-level domains like .click and .link, I’m able to minimize the annual costs for domain registration, with each costing less than $20 per year.
 3. Implementing a GoCD pipeline using Pipeline as Code (PAC): This allows me to orchestrate the certificate management tasks in a version-controlled and secure manner, leveraging GoCD’s encryption capabilities to store sensitive API credentials.
 4. Complementing the GoCD pipeline with custom Bash scripts: I use these scripts to handle the granular certificate provisioning and renewal tasks, as well as running application-specific smoke tests to validate the TLS configuration after updates.
 

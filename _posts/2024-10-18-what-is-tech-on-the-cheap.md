@@ -14,7 +14,7 @@ tags:
 
 *AI generated image from the prompt: “Engineer’s Dilemma: The age-old answer, it depends.”*
 
-Early in my career, I ran across [RFC-1925 — The Twelve Networking Truths](https://www.rfc-editor.org/rfc/rfc1925). While meant to be humorous, there is truth to the statements therein.
+Early in my career, I ran across [RFC-1925 — The Twelve Networking Truths](https://www.rfc-editor.org/rfc/rfc1925). While meant to be humorous, there is truth to the statements therein.
 
 Never in my professional career have I been given a blank check and infinite time to do whatever. There is always a concrete goal or deliverable that I have to meet. The deadline is always too soon, the scope is too large, and I don’t have enough resources.
 

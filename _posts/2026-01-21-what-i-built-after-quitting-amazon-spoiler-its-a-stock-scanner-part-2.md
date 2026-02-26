@@ -1,5 +1,5 @@
 ---
-title: "What I Built After Quitting Amazon (Spoiler: It’s a Stock Scanner) — Part 2"
+title: "What I Built After Quitting Amazon (Spoiler: It’s a Stock Scanner) — Part 2"
 excerpt: "Running the stock scanner with Docker Compose — setup, configuration, and first launch."
 categories:
   - Side Projects
@@ -9,7 +9,7 @@ tags:
   - market-data
 ---
 
-#### Building your own: Step-by-step guide to running it on your own machine
+***Building your own: Step-by-step guide to running it on your own machine***
 
 📖 **Stock Scanner Series:**  
 - [Part 1: Why I Built It]({% post_url 2026-01-16-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner %})  
@@ -38,7 +38,7 @@ Here’s what we’ll do:
 
 **⚠️ HEADS UP: This doesn’t use free data.**
 
-I’m currently using a $200/month **Stocks Advanced** plan from [Massive.com](https://massive.com/pricing) for real-time WebSocket data. A $29/month **Stocks Starter** plan *might* work, but the data is delayed 15 minutes. The free **Stocks Basic** plan won’t cut it — it lacks the WebSockets and Snapshots APIs that this system requires.
+I’m currently using a $200/month **Stocks Advanced** plan from [Massive.com](https://massive.com/pricing) for real-time WebSocket data. A $29/month **Stocks Starter** plan *might* work, but the data is delayed 15 minutes. The free **Stocks Basic** plan won’t cut it — it lacks the WebSockets and Snapshots APIs that this system requires.
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-01.png)
 
@@ -48,7 +48,7 @@ I’m currently using a $200/month **Stocks Advanced** plan from [Massive.com](h
 
 [Sign up](https://massive.com/dashboard/signup) (if you haven’t already) and grab your API key from the [Massive.com dashboard](https://massive.com/dashboard/keys)
 
-#### Set up the Docker Compose file
+#### Set up the Docker Compose file
 
 Create a file named `compose.yaml` and paste this content into it.
 
@@ -82,15 +82,15 @@ You should see output similar to this in your terminal after successfully runnin
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-02.png)
 
-*Screenshot: Command-line interface after successfully running the docker compose commands*
+*Screenshot: Command-line interface after successfully running the docker compose commands*
 
-#### Login to the web app
+#### Login to the web app
 
 Once the `scp` container has successfully started, open the container logs and navigate to [http://localhost:8000](http://localhost:8000/).
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-03.png)
 
-*Screenshot: Login page*
+*Screenshot: Login page*
 
 Authentication is enabled using the default username/password scheme. Other login options are available and can be configured using py4web environment variables. Refer to the [py4web documentation](https://py4web.com/_documentation/static/en/chapter-13.html) for details.
 
@@ -98,13 +98,13 @@ To sign up, hover over **‘Login’** and click **‘Sign Up’**.
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-04.png)
 
-*Screenshot: Click ‘Sign up’ to create a user account*
+*Screenshot: Click ‘Sign up’ to create a user account*
 
 Enter a username and password you can remember, then click **‘Sign Up’**.
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-05.png)
 
-*Screenshot: New user sign up form*
+*Screenshot: New user sign up form*
 
 You should see a “User registered” message if your signup was successful.
 
@@ -112,13 +112,13 @@ You should see a “User registered” message if your signup was successful.
 
 *Screenshot: Message after new user successfully registered*
 
-#### Verify your email
+#### Verify your email
 
 Check the container logs for the `scp` container and open the verification link in your browser.
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-07.png)
 
-*Screenshot: Console logs showing test@example.com mock confirmation email link*
+*Screenshot: Console logs showing test@example.com mock confirmation email link*
 
 After navigating to the verification link, an “Email verified” message will be displayed. Now you’re ready to log in!
 
@@ -128,7 +128,7 @@ After navigating to the verification link, an “Email verified” message will 
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-09.png)
 
-*Screenshot: Sign in form*
+*Screenshot: Sign in form*
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-10.png)
 
@@ -140,7 +140,7 @@ Once logged in, you’ll see three links in the navigation bar: **App**, **Healt
 
 #### **App**
 
-Launches the stock scanner — a [Vue.js](https://vuejs.org/)-based single-page application that displays market data via three drag-and-drop widgets: [TopGainers](https://github.com/kuhl-haus/kuhl-haus-mdp-app/blob/mainline/client/src/components/widgets/TopGainers.vue), [TopGappers](https://github.com/kuhl-haus/kuhl-haus-mdp-app/blob/mainline/client/src/components/widgets/TopGappers.vue), and [TopVolume](https://github.com/kuhl-haus/kuhl-haus-mdp-app/blob/mainline/client/src/components/widgets/TopVolume.vue). I described these widgets in detail in [Part 1 of this series]({% post_url 2026-01-16-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner %}).
+Launches the stock scanner — a [Vue.js](https://vuejs.org/)-based single-page application that displays market data via three drag-and-drop widgets: [TopGainers](https://github.com/kuhl-haus/kuhl-haus-mdp-app/blob/mainline/client/src/components/widgets/TopGainers.vue), [TopGappers](https://github.com/kuhl-haus/kuhl-haus-mdp-app/blob/mainline/client/src/components/widgets/TopGappers.vue), and [TopVolume](https://github.com/kuhl-haus/kuhl-haus-mdp-app/blob/mainline/client/src/components/widgets/TopVolume.vue). I described these widgets in detail in [Part 1 of this series]({% post_url 2026-01-16-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner %}).
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-11.png)
 
@@ -152,7 +152,7 @@ Health check URL emits JSON with the container image source, image version, heal
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-12.png)
 
-*Screenshot: health check at /healthz returns JSON*
+*Screenshot: health check at /healthz returns JSON*
 
 > **Note**: Don’t worry if `container_image` and `image_version` show as **Unknown** on your local machine—that's totally normal. I’ll dive deeper into what these mean in an upcoming post about production deployment strategies.
 
@@ -162,7 +162,7 @@ This the [py4web dashboard](https://py4web.com/_documentation/static/en/chapter-
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-13.png)
 
-*Screenshot: Dashboard login page — default password is ‘changeme’*
+*Screenshot: Dashboard login page — default password is ‘changeme’*
 
 Login to the dashboard using the default password `changeme`. I’ll cover how to change this password later in this post.
 
@@ -190,7 +190,7 @@ If you happen to have a Langflow instance, open the chat settings and enter the 
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-17.png)
 
-*Screenshot: Langflow chat settings dialog*
+*Screenshot: Langflow chat settings dialog*
 
 ### Changing the py4web dashboard password
 
@@ -226,7 +226,7 @@ WORKDIR /home/$user/
 ENTRYPOINT ["/home/py4web/app-entrypoint.sh"]
 ```
 
-#### Step 2: Generate a new password hash
+#### Step 2: Generate a new password hash
 
 Run the following command to generate a hashed password:
 
@@ -240,7 +240,7 @@ You’ll be prompted to enter your desired password. The command uses [pydal’s
 
 ![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-18.png)
 
-*Screenshot: Terminal showing password prompt and password.txt file creation*
+*Screenshot: Terminal showing password prompt and password.txt file creation*
 
 The resulting `password.txt` file for `changeme` looks like this:
 
@@ -276,11 +276,11 @@ docker compose -f compose.yaml up -d
 
 Now you can access the dashboard at `/_dashboard` using your new password instead of the default `changeme`.
 
-### Building Images From Source
+### Building Images From Source
 
 If you’re comfortable modifying source code and want to customize the scanner for your own trading strategies, building from source gives you complete control. Since the official images are built using public GitHub workflows, this section assumes you can follow along without exhaustive hand-holding.
 
-#### Why build from source?
+#### Why build from source?
 
 Building from source lets you:
 
@@ -300,9 +300,9 @@ Make sure you have:
 
 The project is split across three repos:
 
-* [**kuhl-haus-mdp**](https://github.com/kuhl-haus/kuhl-haus-mdp) — Core library with shared data processing logic
-* [**kuhl-haus-mdp-servers**](https://github.com/kuhl-haus/kuhl-haus-mdp-servers) — Backend services (listener, processor, widget service)
-* [**kuhl-haus-mdp-app**](https://github.com/kuhl-haus/kuhl-haus-mdp-app) — Frontend application and web server
+* [**kuhl-haus-mdp**](https://github.com/kuhl-haus/kuhl-haus-mdp) — Core library with shared data processing logic
+* [**kuhl-haus-mdp-servers**](https://github.com/kuhl-haus/kuhl-haus-mdp-servers) — Backend services (listener, processor, widget service)
+* [**kuhl-haus-mdp-app**](https://github.com/kuhl-haus/kuhl-haus-mdp-app) — Frontend application and web server
 
 Clone them using the GitHub CLI:
 
@@ -312,7 +312,7 @@ gh repo clone kuhl-haus/kuhl-haus-mdp-servers
 gh repo clone kuhl-haus/kuhl-haus-mdp-app
 ```
 
-#### Building the MDP Library Image
+#### Building the MDP Library Image
 
 The library image contains shared code used by all the server images. Build this first:
 
@@ -328,7 +328,7 @@ docker buildx build \
     --build-arg IMAGE_VERSION="latest"
 ```
 
-#### Building the MDP Server Images
+#### Building the MDP Server Images
 
 Now build the three backend services. Each depends on the library image you just created.
 
@@ -364,7 +364,7 @@ docker buildx build \
     --build-arg BASE_IMAGE="kuhl-haus-mdp-lib:latest"
 ```
 
-#### Building the Application Server Image
+#### Building the Application Server Image
 
 Finally, build the frontend application in two stages:
 
@@ -394,8 +394,8 @@ docker buildx build \
 
 ### What’s Next
 
-This post covered two ways to get the scanner running on your local machine — using pre-built images or building from source. In upcoming posts, I’ll dive deeper into:
+This post covered two ways to get the scanner running on your local machine — using pre-built images or building from source. In upcoming posts, I’ll dive deeper into:
 
-* **The Market Data Processor internals** — How I calculate relative volume, track daily statistics, and maintain top 500 rankings efficiently
-* **Deployment and infrastructure** — Production deployment strategies and cost optimization techniques
-* **WebSocket challenges** — Handling reconnections, backpressure, and ensuring data consistency in real-time streaming applications
+* **The Market Data Processor internals** — How I calculate relative volume, track daily statistics, and maintain top 500 rankings efficiently
+* **Deployment and infrastructure** — Production deployment strategies and cost optimization techniques
+* **WebSocket challenges** — Handling reconnections, backpressure, and ensuring data consistency in real-time streaming applications
