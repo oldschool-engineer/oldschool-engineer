@@ -12,7 +12,7 @@ tags:
 
 #### A Thought Experiment That Reveals What’s Really Happening in Software Development
 
-![](https://cdn-images-1.medium.com/max/800/1*hGcKa2rWrwrcQFJF9ckMuQ.jpeg)
+![](/assets/images/posts/could-we-just-use-brainfuck-for-vibe-coding/img-01.jpeg)
 
 *This is your brain on Brainfuck*
 

@@ -13,11 +13,11 @@ Explore my humorous chats with “Fake Spock” — a Vulcan-inspired AI on 
 
 I prompted a chatbot to behave like a fictional half-Vulcan from a popular science fiction series. Meet “Fake Spock (@spock)” — my logical AI companion who specializes in dad jokes. Below are some of our most entertaining exchanges, plus the exact recipe to create your own.
 
-![Fake Spock runs a system diagnostic to identify the cause of his apparent forgetfulness — evidently, he didn’t forget, he was just being rhetorical.](https://cdn-images-1.medium.com/max/800/1*NQ3qX4ws7U4AuW88MJ-s5g.png)
+![Fake Spock runs a system diagnostic to identify the cause of his apparent forgetfulness — evidently, he didn’t forget, he was just being rhetorical.](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-01.png)
 
 *Fake Spock runs a system diagnostic to identify the cause of his apparent forgetfulness — evidently, he didn’t forget, he was just being rhetorical.*
 
-![You have indeed lost that loving feeling. The odds of regaining it are statistically insignificant.](https://cdn-images-1.medium.com/max/800/1*7W9KRSyBd0Daz5w6z7OYsA.png)
+![You have indeed lost that loving feeling. The odds of regaining it are statistically insignificant.](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-02.png)
 
 *You have indeed lost that loving feeling. The odds of regaining it are statistically insignificant.*
 
@@ -37,23 +37,23 @@ The responses were typically dull, but sometimes I found them humorous, so I fig
 
 ### Encouraging Fake Spock to Tell Dad Jokes
 
-![I definitely need to tweak your prompt.](https://cdn-images-1.medium.com/max/800/1*ap_nNPOOa1pa89Wj2osSbA.png)
+![I definitely need to tweak your prompt.](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-03.png)
 
 *I definitely need to tweak your prompt.*
 
 Fake Spock was a little too serious and needed encouragement to fully embrace telling dad jokes. Though promising to do better in the future, it only lasts for the current thread. In order for these changes to be permanent, I need to tweak his prompt. That requires a little bit of trial and error, which is what I used the “piña colada” thread for. That’s the reason why my comments are edited in this thread. In the initial version, I was trying different things to see what worked best. After editing my comment, I hit the ‘Regenerate’ button to see what came out.
 
-![Prepare for targeted humor deployment.](https://cdn-images-1.medium.com/max/800/1*xOWKk51tC_yQ3Lp6WZCaZA.png)
+![Prepare for targeted humor deployment.](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-04.png)
 
 *Prepare for targeted humor deployment.*
 
 Once I was happy with the result, I stopped tweaking, so now he’s primed and ready to tell dad jokes at the slightest provocation.
 
-![Dude, that Vulcan dad joke was money.](https://cdn-images-1.medium.com/max/800/1*oZjpU5X8CET0nZ2YETGAaA.png)
+![Dude, that Vulcan dad joke was money.](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-05.png)
 
 *Dude, that Vulcan dad joke was money.*
 
-![Logical Analysis of the Woodchuck Problem](https://cdn-images-1.medium.com/max/800/1*IMviyBiez6eXhthirJO6Tg.png)
+![Logical Analysis of the Woodchuck Problem](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-06.png)
 
 *Logical Analysis of the Woodchuck Problem*
 
@@ -94,7 +94,7 @@ Once I had that all figured out, it was time to enable a sense of humor in the f
 
 > Word play such as assonance, alliteration, onomatopoeia, portmanteau, gibberish, jive, and out-of-character slang and pop-culture references — those are precise opportunities to deliver deftly timed “Dad jokes”.
 
-![Highlighted and annotated prompt explaining the parts that are responsible for Fake Spock’s behavior.](https://cdn-images-1.medium.com/max/800/1*IX8iAOhq_Upbl6khxJ84Rg.png)
+![Highlighted and annotated prompt explaining the parts that are responsible for Fake Spock’s behavior.](/assets/images/posts/live-long-and-prompt-tales-from-the-ai-enterprise/img-07.png)
 
 ### Closing Thoughts
 

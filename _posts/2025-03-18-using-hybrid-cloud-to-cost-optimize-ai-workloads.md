@@ -26,11 +26,11 @@ Here’s the cost breakdown for the past 5 months of usage:
 
 Moving compute on-premises eliminates 77% of costs, with further savings from reduced Secrets Manager and KMS usage. The compute needs are minimal — even 10-year-old hardware can handle it, as Bedrock does the heavy lifting.
 
-![](https://cdn-images-1.medium.com/max/800/1*ZPflhMeR3JR89Jlh2hFmIQ.png)
+![](/assets/images/posts/using-hybrid-cloud-to-cost-optimize-ai-workloads/img-01.png)
 
 Of note, I shutdown my test stack because I didn’t use it and it didn’t make sense to pay for a VPC, ELB, etc. That’s the big drop in cost at the tail-end of January.
 
-![](https://cdn-images-1.medium.com/max/800/1*EMWJu7QqPJ8WWz69S3USmA.png)
+![](/assets/images/posts/using-hybrid-cloud-to-cost-optimize-ai-workloads/img-02.png)
 
 *Average daily cost of AWS Lambda-based API*
 
@@ -118,17 +118,17 @@ AWS components needed for an on-premises hybrid stack:
 
 ### Impact
 
-![](https://cdn-images-1.medium.com/max/800/1*EMWJu7QqPJ8WWz69S3USmA.png)
+![](/assets/images/posts/using-hybrid-cloud-to-cost-optimize-ai-workloads/img-02.png)
 
 *Average daily cost of AWS Lambda-based API*
 
-![](https://cdn-images-1.medium.com/max/800/1*b411dmOPhxMAxRh50H9feA.png)
+![](/assets/images/posts/using-hybrid-cloud-to-cost-optimize-ai-workloads/img-03.png)
 
 *Average daily cost of on-premises hybrid*
 
 There’s an opportunity to save $0.32/day on secrets management, but I will deal with that in a month or so.
 
-![](https://cdn-images-1.medium.com/max/800/1*EoDlyQ4MN_kZQJkcc7z6sA.png)
+![](/assets/images/posts/using-hybrid-cloud-to-cost-optimize-ai-workloads/img-04.png)
 
 *AWS ALB cost $1.08 per day once free-tier usage is exceeded.*
 

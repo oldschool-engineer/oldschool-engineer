@@ -83,13 +83,13 @@ The widgets filter data by default to only show stocks that meet the Five Pillar
 
 Note: I don’t trade penny stocks so I only display prices with two decimal places. Any stock that is priced less than 1 cent is displayed as $0.00.
 
-![](https://cdn-images-1.medium.com/max/2560/1*yEq8PtpbWtX3lUtRW0rzaw.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner/img-02.png)
 
 *Stock Scanner Dashboard with the TopGappers, TopGainers, and TopVolume widgets displayed.*
 
 The background colors are based on the percentage gain. The bands are at 10%, 20%, 50% and 100%. I don’t know the names of the colors so I’ll just use a screenshot to show which is which.
 
-![](https://cdn-images-1.medium.com/max/2560/1*qrXBKQtS-9Z8j8RqqXtkAA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner/img-03.png)
 
 *Color band visualization showing the progression from 10% (dark gray) to 100%+ (bright purple) gains*
 
@@ -108,7 +108,7 @@ Gappers are stocks that open higher during the pre-market session than they clos
 
 The TopGappers widget displays the top 500 stocks sorted by change since yesterday’s close. The left side shows an unfiltered view, while the right side shows the default filtered view.
 
-![](https://cdn-images-1.medium.com/max/2560/1*B5YaLGZGfPWBuHoYC4NTcQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner/img-04.png)
 
 *TopGappers side-by-side. Unfiltered view on the left. Default filters on the right.*
 
@@ -122,7 +122,7 @@ This is why I track both. TopGappers shows me what moved overnight and what’s 
 
 The TopGainers widget displays the top 500 stocks sorted by change since today’s open and has the same filter controls as TopGappers.
 
-![](https://cdn-images-1.medium.com/max/2560/1*SeMCxeTCAXiqDGrx5S3d4g.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner/img-05.png)
 
 *TopGainers side-by-side. Unfiltered view on the left. Default filters on the right.*
 
@@ -132,19 +132,19 @@ The TopVolume widget displays the top 500 stocks by accumulated volume on the da
 
 The idea here is to see where all the trading volume is going. The highest-volume stocks are going to be the “most obvious” stocks to trade — it’s where the entire market is focused. For example, SPY, NVDA, QQQ, and TSLA appear in the top 500 by volume every single day. But here’s where it gets interesting: CJMB normally gets 69K of volume per day but is now trading 176.9M shares on a 1.3M share float. That’s unusual. And look — it’s up 195% since yesterday’s close. Same thing with SPHL. Over 1,000x relative volume and up over 574%! Wow!
 
-![](https://cdn-images-1.medium.com/max/2560/1*5jyqtg3KtNP4KUS38DhDtw.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner/img-01.png)
 
 *Top 500 volume sorted by volume (left) and relative volume (right)*
 
 The TopVolume widget has similar filter controls as the TopGappers and TopGainers widgets, with one key difference: the inability to set a fixed percentage gain threshold. Unlike TopGainers and TopGappers, the TopVolume widget shows both gainers and losers. Instead of setting a threshold for percentage gain, there’s a checkbox labeled ‘Gainers Only’. (As I’m writing this, I just realized the checkbox should actually say ‘Gappers Only’ because that’s the behavior I implemented.)
 
-![](https://cdn-images-1.medium.com/max/2560/1*NUaVc_4O1o9l98AmbjcvXg.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner/img-06.png)
 
 *Checking ‘Gainers Only’ filtered PEW from the list.*
 
 Here’s the key insight: when you compare the same 500 stocks sorted by raw volume versus relative volume, notice the dramatic difference. **Sorting by relative volume reveals a much higher concentration of 10%+ gainers.** This validates a core principle of momentum trading — unusual volume relative to a stock’s typical activity is a far better signal than raw volume alone. The stocks experiencing 5x, 10x, or 20x their normal volume are the ones making significant moves, even if their absolute volume doesn’t crack the top of the raw volume rankings.
 
-![](https://cdn-images-1.medium.com/max/2560/1*3vHmtR1XScMXrjSKbB9piA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner/img-07.png)
 
 *Comparison: Top 500 stocks sorted by volume (left) versus relative volume (right), showing higher concentration of significant gainers when sorted by relative volume*
 
@@ -160,7 +160,7 @@ Finally, the **Widget Data Service** bridges the processed data to your browser.
 
 **RabbitMQ** handles the queuing and **Redis** provides both caching and pub/sub streaming. Together, they enable the horizontal scalability and real-time performance that makes this scanner actually useful for day trading.
 
-![](https://cdn-images-1.medium.com/max/800/1*PU9kl1baVR5Dyqy3NwK57A.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner/img-08.png)
 
 *Architecture diagram showing the application server with SPA connected to the three-service data plane via WebSocket*
 

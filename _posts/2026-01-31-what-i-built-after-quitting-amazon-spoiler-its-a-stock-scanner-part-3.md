@@ -73,7 +73,7 @@ You’ll need Kubernetes (v1.32+) and Ansible (2.19+). I’m using Docker Deskto
 
 **One critical note:** Don’t deploy this to a public cloud and expose it to the internet. The security model assumes you’re behind a firewall. If you’re running this in AWS or GCP, keep it in a private subnet or you’re gonna have a bad time.
 
-![](https://cdn-images-1.medium.com/max/800/1*3AX8KJ1nl8IBWzRBg3igMw.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-16.png)
 
 *SCREENSHOT: Tool versions verification*
 
@@ -96,7 +96,7 @@ gh repo clone kuhl-haus/kuhl-haus-mdp-deployment
 
 The fourth repo (`kuhl-haus-mdp`) is the core library - you don't need it for deployment, it's a dependency that gets pulled in automatically.
 
-![](https://cdn-images-1.medium.com/max/800/1*443FOz8Uc6oTnMOm5gDwFg.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-17.png)
 
 *SCREENSHOT: terminal showing directory structure*
 
@@ -112,7 +112,7 @@ Create a vault at `ansible/group_vars/secrets.yml`, which is .gitignored, so yo
 ansible-vault create ansible/group_vars/secrets.yml
 ```
 
-![](https://cdn-images-1.medium.com/max/1200/1*fqoydnBdgjlIK9h-8Pu1Ug.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-18.png)
 
 *SCREENSHOT: Vault configuration example (redacted sensitive data)*
 
@@ -124,7 +124,7 @@ Three variables matter:
 * `BASE_WORKING_DIR` - Where you cloned the repos
 * Domain names for your services
 
-![](https://cdn-images-1.medium.com/max/1200/1*vOSA_xZBtfrGZpT_Tr0OWw.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-19.png)
 
 *SCREENSHOT: Set environment variables*
 
@@ -141,7 +141,7 @@ The example has placeholder domains. Change them to yours. If you're setting up 
 
 **Why this matters:** Kubernetes ingress routes traffic based on hostnames. Get these wrong and you’ll deploy successfully but won’t be able to access anything.
 
-![](https://cdn-images-1.medium.com/max/1200/1*gai6qPiGq_QHo7t00rjt_Q.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-20.png)
 
 *SCREENSHOT: Modified example inventory file.*
 
@@ -149,7 +149,7 @@ The example has placeholder domains. Change them to yours. If you're setting up 
 
 Quick housekeeping first: Install Ansible dependencies with the prerequisites playbook. Takes about 30 seconds to create a Python venv and install the Kubernetes module.
 
-![](https://cdn-images-1.medium.com/max/1200/1*1BqHe8N8ML7S-_9AFLMXiA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-21.png)
 
 *SCREENSHOT: Prerequisites installation output*
 
@@ -202,7 +202,7 @@ The playbook supports both AWS Route53 and Cloudflare for DNS-01 validation. You
 
 **For Docker Desktop specifically:** You’ll need to set up DNS records on your local network (your router, Pi-hole, or whatever runs your internal DNS) that point your chosen hostnames to your PC. The ACME validation happens against the public zone, but the actual traffic goes to your local machine.
 
-![](https://cdn-images-1.medium.com/max/1200/1*UQejlVRpOOfHS_3BK4R_3w.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-22.png)
 
 *SCREENSHOT: k8s-infra.yml playbook completed successfully*
 
@@ -210,7 +210,7 @@ The playbook supports both AWS Route53 and Cloudflare for DNS-01 validation. You
 
 Here’s where we find out if everything actually works.
 
-![](https://cdn-images-1.medium.com/max/1200/1*RNg1Lk3tiOuzQteZ3wD3_A.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-01.png)
 
 *SCREENSHOT: Showing deployment summary and verification steps*
 
@@ -220,19 +220,19 @@ Remember in [Part 2]({% post_url 2026-01-21-what-i-built-after-quitting-amazon-s
 
 In Kubernetes, those fields show real values: `ghcr.io/kuhl-haus/kuhl-haus-mdp-app-server:0.1.4.dev1-2c68fe9` and `0.1.4.dev1-2c68fe9`.
 
-![](https://cdn-images-1.medium.com/max/1200/1*oY_coffjbtMsiOMfzpC56Q.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-02.png)
 
 *SCREENSHOT: Smoke test script inspecting image tag returned from health check endpoint*
 
 **Why this matters:** The deployment scripts use the same logic as the image build pipeline to calculate version tags from git commit history. That’s why you needed to clone the repos — not for the code, but for the git history.
 
-![](https://cdn-images-1.medium.com/max/1200/1*OeRiBGJlN6H6VwIljeeorQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-03.png)
 
 *SCREENSHOT: App landing page with image version and image source highlighted*
 
 Checking the [GitHub packages](https://github.com/kuhl-haus/kuhl-haus-mdp-app/pkgs/container/kuhl-haus-mdp-app-server) confirms `0.1.4.dev1-2c68fe9` is indeed the latest image.
 
-![](https://cdn-images-1.medium.com/max/1200/1*dz_znRTwum5BAEt9aToa9Q.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-04.png)
 
 #### Why Simple Health Checks Aren’t Enough
 
@@ -246,7 +246,7 @@ My smoke test script checks the version tag in the health check response. If it 
 
 This is also why I run a pre-production environment. Upgrade all PPE nodes first, verify the version-tagged health checks pass, then move to production with confidence.
 
-![](https://cdn-images-1.medium.com/max/1200/1*75O3Mm2l4G8XpvsjGM8hSg.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-05.png)
 
 *SCREENSHOT: No market data… yet.*
 
@@ -262,7 +262,7 @@ So: sequential deployment, dependency order enforced.
 
 Quick housekeeping: each namespace needs its own cert-manager to issue certificates. Frontend and data plane are isolated — the frontend cert-manager can’t issue certs for backend services.
 
-![](https://cdn-images-1.medium.com/max/1200/1*77DEhiSp17-itiQauIXZhw.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-06.png)
 
 *SCREENSHOT: certificate manager deployment*
 
@@ -272,15 +272,15 @@ In production, Redis runs with authentication. For this demo, I skipped the pass
 
 Is this how you should run Redis? No. Is it fine for a local demo that never touches the internet? Yes.
 
-![](https://cdn-images-1.medium.com/max/1200/1*zlnqjaZWjQX56DxGvLMbUw.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-07.png)
 
 *SCREENSHOT: deployment summary for Redis*
 
-![](https://cdn-images-1.medium.com/max/1200/1*24czzK6S05OOVr18bb93dw.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-08.png)
 
 *SCREENSHOT: Smoke test Market Data Cache*
 
-![](https://cdn-images-1.medium.com/max/1200/1*RgMPL9tFBWVnaMyRFQWXiA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-09.png)
 
 *SCREENSHOT: Optional Redis Browser Interface*
 
@@ -288,25 +288,25 @@ Is this how you should run Redis? No. Is it fine for a local demo that never tou
 
 Same deal — I enabled the management dashboard metrics collector, which RabbitMQ deprecated in favor of Prometheus. But Prometheus metrics don’t make good screenshots, and you’re not running this in production anyway.
 
-![](https://cdn-images-1.medium.com/max/1200/1*YVoCBlIQhUvl-0zSGb-kRw.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-10.png)
 
 *SCREENSHOT: RabbitMQ deployment summary*
 
-![](https://cdn-images-1.medium.com/max/1200/1*SRZPgStrQhvKHmZ0hSoDAA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-11.png)
 
 *SCREENSHOT: RabbitMQ smoke test script output*
 
-![](https://cdn-images-1.medium.com/max/800/1*6T-6BvXD4BWy7rEf4YMxQA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-12.png)
 
-![](https://cdn-images-1.medium.com/max/1200/1*CVVm6DNLfvG6AFQreTPUiA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-13.png)
 
 #### Market Data Listener
 
 Now we’re back to my code, which means we’re back to version-tagged health checks.
 
-![](https://cdn-images-1.medium.com/max/1200/1*vxWADsFcFT3YKDzN-FdLlw.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-14.png)
 
-![](https://cdn-images-1.medium.com/max/1200/1*GAacqQke0Zr4XI9RZTjPmQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-15.png)
 
 Notice the smoke test validates the image tag? Every component I built emits `image_version` and `container_image` from its health endpoint. Redis and RabbitMQ are third-party - they don't have this verification built in.
 
@@ -314,17 +314,17 @@ Notice the smoke test validates the image tag? Every component I built emits `im
 
 This is the component that crashes if the MDL hasn’t run first. With the MDL deployed, the queues exist, and the MDP starts cleanly.
 
-![](https://cdn-images-1.medium.com/max/1200/1*OGvOgdYPl-ncNjlfp6ZLBQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-24.png)
 
-![](https://cdn-images-1.medium.com/max/1200/1*jiYs5i_KdDddsrMoQgaCHA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-25.png)
 
 #### Widget Data Service
 
 Final piece of the backend puzzle.
 
-![](https://cdn-images-1.medium.com/max/1200/1*yQrOdMt0aD1QCV91QdzgVQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-23.png)
 
-![](https://cdn-images-1.medium.com/max/1200/1*7PL6UA5t4q1hCd9PdloC0A.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-26.png)
 
 *SCREENSHOT: Widget Data Service smoke test script*
 
@@ -334,7 +334,7 @@ Time to see if this thing actually works.
 
 Open the app and… yes, data is flowing. Scanners are populating. But let’s trace exactly how that data got there — this doubles as a tour of the data pipeline.
 
-![](https://cdn-images-1.medium.com/max/1200/1*H8JAhm0dOwEbt44NHxUp8g.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-27.png)
 
 *SCREENSHOT: Stock Scanner Dashboard with populated scanners*
 
@@ -377,7 +377,7 @@ That’s a healthy listener. Messages are flowing into RabbitMQ queues.
 
 If messages were piling up here, it’d mean the processors aren’t keeping pace. But the queues are empty — good sign. Messages are flowing through, not backing up.
 
-![](https://cdn-images-1.medium.com/max/1200/1*OGjLE7kgZ0cIpyNZ2WqBcg.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-28.png)
 
 *SCREENSHOT: RabbitMQ dashboard showing no queued messages.*
 
@@ -436,7 +436,7 @@ Version matches deployment (0.1.12) ✓
 
 This is where processed data lives. The browser shows keys being populated in real-time:
 
-![](https://cdn-images-1.medium.com/max/1200/1*T854Tk8qWOpCvB7Y19ScfA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-29.png)
 
 *SCREENSHOT: Redis browser showing cache steadily being populated by the market data processor*
 
@@ -461,7 +461,7 @@ Three active WebSocket clients — that’s the three widgets I have open in
 
 Open browser dev tools and you can watch the WebSocket traffic:
 
-![](https://cdn-images-1.medium.com/max/1200/1*JfP-xX5HRqAMYAk4SuvQoA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-3/img-30.png)
 
 *Dev tools showing WebSocket subscriptions*
 

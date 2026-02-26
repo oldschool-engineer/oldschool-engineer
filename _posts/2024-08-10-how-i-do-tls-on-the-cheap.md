@@ -13,7 +13,7 @@ tags:
 
 TLS certificates can get expensive. However, I can obtain as many TLS certificates as I want, for free, simply by automating the process. The only catch — the certificates expire in 90 days. I can live with that.
 
-![](https://cdn-images-1.medium.com/max/800/0*r0pmIHjsfUVjmL3l)
+![](/assets/images/posts/how-i-do-tls-on-the-cheap/img-01.png)
 
 *Photo by AltumCode on Unsplash*
 

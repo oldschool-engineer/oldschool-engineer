@@ -41,7 +41,7 @@ Spoiler: it wasn’t.
 
 First thing I did was open [Issue #3](https://github.com/kuhl-haus/kuhl-haus-mdp/issues/3) to track the problem — because debugging without a paper trail is just vibes. First action item: mitigate. That meant reverting the distributed tracing changes in MDL ([v0.2.14](https://kuhl-haus-mdp.readthedocs.io/en/latest/changelog.html#version-0-2-14-2026-02-17)). Stabilize the patient, *then* figure out what’s actually wrong.
 
-![](https://cdn-images-1.medium.com/max/1200/0*_pzvItAuy2CyLINX)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-5/img-01.png)
 
 *Clear evidence of a bottleneck — observability merely pushes it past its breaking point.*
 
@@ -104,7 +104,7 @@ The cleanup: `publisher_confirms` became a constructor parameter (default `True`
 
 **Result: 270 msg/s → ~600 msg/s.** More than double, once I stopped asking `asyncio` to be concurrent and actually gave it the structure to do so.
 
-![](https://cdn-images-1.medium.com/max/800/0*D1sHKWzjyNge9JFa)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-5/img-02.png)
 
 *Left: that flat top at ~270 msg/s is the dead giveaway — a structural ceiling, not a load problem. Right: one commit (caf1ddd), concurrent channels, and the ceiling is gone.*
 
@@ -124,7 +124,7 @@ The answer came in layers, and peeling them back was half the fun.
 
 The concurrent channel fix got me to 600, however, further testing showed it bottlenecking around 850 because publisher confirms were still the constraint. Every publish waited for a `basic.ack` from the broker before the channel was free again. Safe? Yes. Fast? Not fast enough.
 
-![](https://cdn-images-1.medium.com/max/1200/1*F2rpQxNulAisfxoIe0MRQA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-5/img-03.png)
 
 *Layer 1: publisher confirms on, ~800 msg/s sustained. Push past that and the MDL reconnects — visible top-right. The ACK wait is now the ceiling.*
 
@@ -132,7 +132,7 @@ The concurrent channel fix got me to 600, however, further testing showed it bot
 
 Flipping `publisher_confirms=False` changed the game entirely. Without ACK waits, publishes become fire-and-forget — the message hits TCP buffers and the code moves on. Peak throughput jumped to approximately **2,500 msg/s** before something else became the limiting factor.
 
-![](https://cdn-images-1.medium.com/max/1200/1*lgrUBqWtiiP0H_SJWktgtQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-5/img-04.png)
 
 *Layer 2: one transition from publisher\_confirms=True to False, seen from two angles — received rate on the left, queue throughput on the right. Trades enabled to crank the volume. Fire-and-forget blows past 2,500 msg/s — but three reconnections and an unhealthy MDL say we found the next ceiling, not the final answer.*
 
@@ -146,7 +146,7 @@ The trades feed was the highest-volume data source by a wide margin — and,
 
 With the remaining feed — aggregates — running against real market conditions, the platform hit **1,490 msg/s** at market close. That’s peak load, during one of the most volatile parts of the trading day, and the platform handled it without so much as a hiccup.
 
-![](https://cdn-images-1.medium.com/max/1200/1*Jz8kBqYP1DrtMtOt_TQz1Q.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-5/img-05.png)
 
 *1,490 msg/s at market close. Healthy connection. Five reconnections since the service started — all from earlier testing. That number highlighted top-right? The one with the yellow arrow pointing at it. That’s Wave 1, answered.*
 

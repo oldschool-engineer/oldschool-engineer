@@ -13,7 +13,7 @@ tags:
 
 #### Learn how a two-layer asyncio.Event and Redis lock strategy eliminates cache-miss stampedes, cutting thousands of redundant Redis calls at market open.
 
-![](https://cdn-images-1.medium.com/max/1200/1*ejEIEJEsMaKwZzHZNWD-bA.jpeg)
+![](/assets/images/posts/prevent-cache-stampedes-with-asyncio-events/img-01.jpeg)
 
 *My miniature nano cow stampeding herd, heading straight for Redis at market open. Every. Single. Morning.*
 

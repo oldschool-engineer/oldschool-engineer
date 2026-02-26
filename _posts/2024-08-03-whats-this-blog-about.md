@@ -9,7 +9,7 @@ tags:
   - career
 ---
 
-![USS Nimitz (CVN-68) underway in the Persian Gulf with Carrier Air Wing (CVW) 9, 23 March 1993, enforcing the no-fly zone against Iraq on the first day of Operation Southern Watch. US Navy photo by PH2 Tim Tow. Naval History & Heritage Command (NH&HC), photo # NH 106554-KN.    https://www.history.navy.mil/](https://cdn-images-1.medium.com/max/800/1*uYHEzA16TKkgJJ3I4XRIEA.jpeg)
+![USS Nimitz (CVN-68) underway in the Persian Gulf with Carrier Air Wing (CVW) 9, 23 March 1993, enforcing the no-fly zone against Iraq on the first day of Operation Southern Watch. US Navy photo by PH2 Tim Tow. Naval History & Heritage Command (NH&HC), photo # NH 106554-KN.    https://www.history.navy.mil/](/assets/images/posts/whats-this-blog-about/img-01.jpeg)
 
 *USS Nimitz (CVN-68) underway in the Persian Gulf with Carrier Air Wing (CVW) 9, 23 March 1993, enforcing the no-fly zone against Iraq on the first day of Operation Southern Watch. US Navy photo by PH2 Tim Tow. Naval History & Heritage Command (NH&HC), photo # NH 106554-KN. https://www.history.navy.mil/*
 

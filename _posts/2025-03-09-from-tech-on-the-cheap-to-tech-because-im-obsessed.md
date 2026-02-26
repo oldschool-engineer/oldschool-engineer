@@ -44,7 +44,7 @@ I’m an idiot.
 
 I could have saved a year of my life. Proxmox VE does exactly what I need with minimal fuss. HA groups, replication, backups, SDN, converged storage, firewalls, metrics, multi-tenancy, cloud-init, etc. There’s a lot there, and I use almost all of it. I even have a few LXC containers. Ha!
 
-![](https://cdn-images-1.medium.com/max/800/1*WVEpJCUngagLN0c1aKqnhg.png)
+![](/assets/images/posts/from-tech-on-the-cheap-to-tech-because-im-obsessed/img-01.png)
 
 With Proxmox VE handling all of my hypervisor needs, my next challenge is container orchestration.
 

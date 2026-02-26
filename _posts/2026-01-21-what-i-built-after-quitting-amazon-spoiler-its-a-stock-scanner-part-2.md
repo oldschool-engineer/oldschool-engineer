@@ -40,7 +40,7 @@ Here’s what we’ll do:
 
 I’m currently using a $200/month **Stocks Advanced** plan from [Massive.com](https://massive.com/pricing) for real-time WebSocket data. A $29/month **Stocks Starter** plan *might* work, but the data is delayed 15 minutes. The free **Stocks Basic** plan won’t cut it — it lacks the WebSockets and Snapshots APIs that this system requires.
 
-![](https://cdn-images-1.medium.com/max/800/1*odRYn8uKhPztxY2KRoGrqA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-01.png)
 
 *Massive.com pricing: Stocks Starter is the cheapest plan with the required services WebSockets and Snapshots.*
 
@@ -80,7 +80,7 @@ docker compose -f compose.yaml up -d --remove-orphans;
 
 You should see output similar to this in your terminal after successfully running the Docker Compose commands:
 
-![](https://cdn-images-1.medium.com/max/800/1*8xBh3-UeNNo_5kKXRM_jUQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-02.png)
 
 *Screenshot: Command-line interface after successfully running the docker compose commands*
 
@@ -88,7 +88,7 @@ You should see output similar to this in your terminal after successfully runnin
 
 Once the `scp` container has successfully started, open the container logs and navigate to [http://localhost:8000](http://localhost:8000/).
 
-![](https://cdn-images-1.medium.com/max/800/1*ufPohSZz7xyzJsrZdII_Sg.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-03.png)
 
 *Screenshot: Login page*
 
@@ -96,19 +96,19 @@ Authentication is enabled using the default username/password scheme. Other logi
 
 To sign up, hover over **‘Login’** and click **‘Sign Up’**.
 
-![](https://cdn-images-1.medium.com/max/800/1*4mKjr8z0MEKytuGXU6dSSQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-04.png)
 
 *Screenshot: Click ‘Sign up’ to create a user account*
 
 Enter a username and password you can remember, then click **‘Sign Up’**.
 
-![](https://cdn-images-1.medium.com/max/800/1*MG8RNV6RJQrrj393alSw5A.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-05.png)
 
 *Screenshot: New user sign up form*
 
 You should see a “User registered” message if your signup was successful.
 
-![](https://cdn-images-1.medium.com/max/800/1*FoSOs2aEAwPNbsrTr6ZKiQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-06.png)
 
 *Screenshot: Message after new user successfully registered*
 
@@ -116,21 +116,21 @@ You should see a “User registered” message if your signup was successful.
 
 Check the container logs for the `scp` container and open the verification link in your browser.
 
-![](https://cdn-images-1.medium.com/max/800/1*VZ5jhbSlDHGOvoCqxCNQRQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-07.png)
 
 *Screenshot: Console logs showing test@example.com mock confirmation email link*
 
 After navigating to the verification link, an “Email verified” message will be displayed. Now you’re ready to log in!
 
-![](https://cdn-images-1.medium.com/max/800/1*MphTvCzNxb8HEKY6o2Cd3Q.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-08.png)
 
 *Screenshot: Message after successful email verification*
 
-![](https://cdn-images-1.medium.com/max/800/1*8pzYCBc2N_YEe00lKOvcbg.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-09.png)
 
 *Screenshot: Sign in form*
 
-![](https://cdn-images-1.medium.com/max/800/1*MTGvbyls3zECoadL3Dq3gw.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-10.png)
 
 *Screenshot: Home page after successful login*
 
@@ -142,7 +142,7 @@ Once logged in, you’ll see three links in the navigation bar: **App**, **Healt
 
 Launches the stock scanner — a [Vue.js](https://vuejs.org/)-based single-page application that displays market data via three drag-and-drop widgets: [TopGainers](https://github.com/kuhl-haus/kuhl-haus-mdp-app/blob/mainline/client/src/components/widgets/TopGainers.vue), [TopGappers](https://github.com/kuhl-haus/kuhl-haus-mdp-app/blob/mainline/client/src/components/widgets/TopGappers.vue), and [TopVolume](https://github.com/kuhl-haus/kuhl-haus-mdp-app/blob/mainline/client/src/components/widgets/TopVolume.vue). I described these widgets in detail in [Part 1 of this series]({% post_url 2026-01-16-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner %}).
 
-![](https://cdn-images-1.medium.com/max/2560/1*fWxHPCUj1XuztsRh5bQhsw.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-11.png)
 
 *Screenshot: Application showing all three widgets displayed*
 
@@ -150,7 +150,7 @@ Launches the stock scanner — a [Vue.js](https://vuejs.org/)-based single-p
 
 Health check URL emits JSON with the container image source, image version, health status, and Py4web version.
 
-![](https://cdn-images-1.medium.com/max/800/1*wZ4t4aOmvMF6j_l_JoMMOQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-12.png)
 
 *Screenshot: health check at /healthz returns JSON*
 
@@ -160,17 +160,17 @@ Health check URL emits JSON with the container image source, image version, heal
 
 This the [py4web dashboard](https://py4web.com/_documentation/static/en/chapter-04.html). It’s used to manage applications and databases. More information is available in the [py4web documentation](https://py4web.com/_documentation).
 
-![](https://cdn-images-1.medium.com/max/800/1*RLD3n5EMJM9GRdgzeXVSVQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-13.png)
 
 *Screenshot: Dashboard login page — default password is ‘changeme’*
 
 Login to the dashboard using the default password `changeme`. I’ll cover how to change this password later in this post.
 
-![](https://cdn-images-1.medium.com/max/800/1*I0MU2zKecJz1FP-CwyeHHA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-14.png)
 
 *Screenshot: Dashboard opened to \_default application*
 
-![](https://cdn-images-1.medium.com/max/800/1*y4qcaB6ic15-bikum0flSQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-15.png)
 
 *Screenshot: Dashboard displaying the contents of \_default/controllers.py*
 
@@ -180,7 +180,7 @@ You might also notice the **‘chat settings’** icon and chat dialog in the fo
 
 This feature simply gives me access to my Langflow server via an embedded chat interface. **It’s purely optional** and has *zero* integration with the rest of the application.
 
-![](https://cdn-images-1.medium.com/max/1200/1*S8DE2VDjzgukVHOGL0czKA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-16.png)
 
 *Screenshot: Home page with arrows indicating chatbot integration features*
 
@@ -188,7 +188,7 @@ If you happen to have a Langflow instance, open the chat settings and enter the 
 
 **All settings are stored in your local browser using the** [**Web Storage API**](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)**— they never leave your machine.** (Source code is [available here](https://github.com/kuhl-haus/kuhl-haus-mdp-app/blob/mainline/apps/_default/templates/index.html#L266-L529).)
 
-![](https://cdn-images-1.medium.com/max/1200/1*D2rIuqQBEpMQC-cPQASmAw.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-17.png)
 
 *Screenshot: Langflow chat settings dialog*
 
@@ -238,7 +238,7 @@ You’ll be prompted to enter your desired password. The command uses [pydal’s
 
 **Example:** Running the command and entering `changeme` as the password:
 
-![](https://cdn-images-1.medium.com/max/1200/1*fcd_T375fX4AjHYqwZB1qQ.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-2/img-18.png)
 
 *Screenshot: Terminal showing password prompt and password.txt file creation*
 

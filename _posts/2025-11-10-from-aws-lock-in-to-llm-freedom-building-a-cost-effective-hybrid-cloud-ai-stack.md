@@ -14,7 +14,7 @@ tags:
 
 #### Self-hosting LiteLLM, Langflow, and Khoj for maximum flexibility
 
-![](https://cdn-images-1.medium.com/max/800/1*wDngJAHMucjXVUAhayPuRw.png)
+![](/assets/images/posts/from-aws-lock-in-to-llm-freedom-building-a-cost-effective-hybrid-cloud-ai-stack/img-01.png)
 
 Earlier this year, [I wrote about reducing my AWS costs through a hybrid-cloud approach]({% post_url 2025-03-18-using-hybrid-cloud-to-cost-optimize-ai-workloads %}). The core insight: the majority of my AWS costs came from compute (Lambda) usage, while the AI “heavy lifting” performed by AWS Bedrock constituted only 5% of my costs. By moving compute on-premises, I reduced costs significantly. However, maintaining the on-premises software stack proved more expensive than anticipated.
 

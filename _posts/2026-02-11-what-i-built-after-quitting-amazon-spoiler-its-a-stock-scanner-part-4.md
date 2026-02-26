@@ -83,17 +83,17 @@ For Kubernetes observability, I configured the OpenTelemetry Operator and used o
 
 For application metrics, I built a custom Prometheus JSON exporter to scrape the health check endpoints. It runs as a sidecar, translates JSON payloads into Prometheus metrics via a config file, and exposes everything at `/probe`. Simple, decoupled, effective. I've open-sourced the [JSON exporter and configuration](https://github.com/kuhl-haus/kuhl-haus-mdp-deployment/tree/mainline/monitoring) for the masochists out there.
 
-![](https://cdn-images-1.medium.com/max/1200/1*sjXeufVDWr8hvOWKuhutVg.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-4/img-01.png)
 
 *Graph showing MDL message send and receive rates*
 
-![](https://cdn-images-1.medium.com/max/1200/1*sv8t5fK7AS-fnrRQ83rN5A.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-4/img-03.png)
 
 *The PoC’s death rattle, visualized.*
 
 Rather than restart the MDP, I let it run and self-recover. The green line shows the Massive Data Analyzer humming along processing aggregate messages. The red line shows the Top Stocks Analyzer having a full-blown meltdown at market open (6:30 AM Pacific), flat-lining for an hour and then thrashing for the next two, finally recovering around 9:30 AM. Notice how the red line flatlines before rising sharply, spiking to 340+ messages/sec right as it recovers — classic stampeding herd problem.
 
-![](https://cdn-images-1.medium.com/max/1200/1*9dt51p8d1wqEp556Cx2FjA.png)
+![](/assets/images/posts/what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-4/img-02.png)
 
 *This is what “crashes like clockwork” looks like in Grafana.*
 

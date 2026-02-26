@@ -10,7 +10,7 @@ tags:
 
 *Origins for my upcoming “*[*Tech ‘On the Cheap’*](/tags/#home-lab)*” blog series. (Edit: I’ve officially abandoned this idea. Read why,* [*here*]({% post_url 2025-03-09-from-tech-on-the-cheap-to-tech-because-im-obsessed %})*.)*
 
-![](https://cdn-images-1.medium.com/max/800/1*r9zHTRb2IBhqqfvEV_EzDQ.png)
+![](/assets/images/posts/what-is-tech-on-the-cheap/img-01.png)
 
 *AI generated image from the prompt: “Engineer’s Dilemma: The age-old answer, it depends.”*
 
@@ -26,7 +26,7 @@ Given these challenges, we navigate projects with limited resources, tight deadl
 
 > (7a) (corollary). Good, Fast, Cheap: Pick any two (you can’t have all three).
 
-![](https://cdn-images-1.medium.com/max/800/1*nUj5oUIop15vWo4x6wKXXA.jpeg)
+![](/assets/images/posts/what-is-tech-on-the-cheap/img-02.jpeg)
 
 *[Evidence to support rule 7a] AI generated image “fast and cheap” via AWS Bedrock playground.*
 

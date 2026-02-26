@@ -11,7 +11,7 @@ tags:
 
 #### Discover how I created my own random Dad Joke site in just 60 minutes, all inspired by an unexpected AI conversation.
 
-![](https://cdn-images-1.medium.com/max/800/0*qDInvpeI3lS-XciD)
+![](/assets/images/posts/automating-laughter-building-a-random-dad-joke-site-in-an-hour/img-01.png)
 
 *Photo by Timothy Dykes on Unsplash*
 
