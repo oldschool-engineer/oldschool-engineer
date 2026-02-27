@@ -74,6 +74,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+# Exclude from Jekyll build — .github contains agent instructions and
+# other repo metadata that should not be processed as site pages.
+# https://jekyllrb.com/docs/configuration/options/#global-configuration
+exclude:
+  - .github
+
 # Search — client-side via Lunr.js, no server required
 # https://mmistakes.github.io/minimal-mistakes/docs/configuration/#site-search
 search: true
