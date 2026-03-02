@@ -1,4 +1,6 @@
 ---
+layout: null
+permalink: /robots.txt
 ---
 # https://www.robotstxt.org/
 # Allow indexing of all public content
