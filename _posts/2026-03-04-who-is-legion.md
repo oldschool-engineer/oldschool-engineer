@@ -58,7 +58,7 @@ Least privilege isn't just for production systems. Same principle, same discipli
 
 Legion operates under a fine-grained GitHub Personal Access Token scoped to a dedicated machine account: [`kuhl-haus-legion`](https://github.com/kuhl-haus-legion).
 
-Not my personal account. Not an org-admin token. A machine account, scoped to exactly the repos it needs to touch.
+Not my personal account. Not an org-admin token. A machine account, scoped to exactly the repos it needs to touch and only given the permissions it needs to accomplish its tasks.
 
 If something goes sideways — bad output, runaway sub-agent, anything — the damage is bounded. Legion can't touch my personal repos, can't act as me, and cannot escalate its own permissions. It can only reach what I've explicitly handed it.
 
