@@ -275,7 +275,35 @@ Present only in directories for posts imported from Medium. Maps original CDN fi
 
 ---
 
-## 7. Cross-References and Links
+## 7. Series Navigation Blocks
+
+Multi-part series use a consistent navigation block. It appears after the opening subtitle (if any) or directly after the front matter.
+
+### Template
+
+```markdown
+📖 **Series Name:**
+- [Part 1: Short Title]({% post_url YYYY-MM-DD-slug %})
+- [Part 2: Short Title]({% post_url YYYY-MM-DD-slug %})
+- Part 3: Short Title (you are here)
+- [Part 4: Short Title]({% post_url YYYY-MM-DD-slug %})
+```
+
+### Rules
+
+- Starts with 📖 emoji and bold series name
+- Each line (except the last) ends with **two trailing spaces** for markdown line breaks
+- The current post is **plain text** (no link) with `(you are here)` marker
+- All other posts are linked using `{% post_url %}` Liquid tags
+- `{% post_url %}` takes the filename **without** the `.md` extension
+
+### When Adding to a Series
+
+Update **all** posts in the series to include the new entry in their navigation blocks. Ensure each post's `(you are here)` marker is on its own entry.
+
+---
+
+## 8. Cross-References and Links
 
 ### Internal Post Links
 
@@ -304,7 +332,7 @@ Use inline markdown links. Tom frequently links to:
 
 ---
 
-## 8. Content Creation Workflow
+## 9. Content Creation Workflow
 
 1. **Choose filename:** `_posts/YYYY-MM-DD-title-slug.md`
 2. **Write front matter:** Follow Section 5 exactly
@@ -324,7 +352,7 @@ Use inline markdown links. Tom frequently links to:
 
 ---
 
-## 9. Content Editing Checklist
+## 10. Content Editing Checklist
 
 - [ ] No non-breaking spaces (U+00A0) or hair spaces (U+200A)
 - [ ] All internal links use `{% post_url %}` — not hardcoded URLs
@@ -341,7 +369,7 @@ Use inline markdown links. Tom frequently links to:
 
 ---
 
-## 10. Code Maintenance
+## 11. Code Maintenance
 
 ### Theme
 
@@ -392,7 +420,7 @@ These are one-time tools, not part of the site:
 
 ---
 
-## 11. SEO and Brand Strategy
+## 12. SEO and Brand Strategy
 
 ### Primary Objective
 
@@ -436,7 +464,7 @@ When creating content, naturally reinforce these differentiators:
 
 ---
 
-## 12. Publishing Workflow (Jekyll → Medium)
+## 13. Publishing Workflow (Jekyll → Medium)
 
 ### Process
 
@@ -459,7 +487,7 @@ When creating content, naturally reinforce these differentiators:
 
 ---
 
-## 13. Platform Strategy and Limitations
+## 14. Platform Strategy and Limitations
 
 ### Current Platform Strengths
 
@@ -499,7 +527,7 @@ When creating content, naturally reinforce these differentiators:
 
 ---
 
-## 14. Profile Consistency
+## 15. Profile Consistency
 
 ### Active Profiles
 
@@ -530,7 +558,7 @@ This file serves double duty as both the GitHub profile page and the Jekyll home
 
 ---
 
-## 15. Quick Reference
+## 16. Quick Reference
 
 ### New Post Template
 
@@ -549,6 +577,15 @@ tags:
 ### First Section Heading
 
 Content goes here.
+```
+
+### Series Nav Template
+
+```markdown
+📖 **Series Name:**
+- [Part 1: Title]({% post_url YYYY-MM-DD-slug %})
+- Part 2: Title (you are here)
+- [Part 3: Title]({% post_url YYYY-MM-DD-slug %})
 ```
 
 ### Image Reference Template
