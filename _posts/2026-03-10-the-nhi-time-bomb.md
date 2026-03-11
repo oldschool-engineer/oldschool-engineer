@@ -49,7 +49,7 @@ Traditional least privilege is hard enough. You define the minimum access a syst
 
 AI agents are not deterministic.
 
-A coding agent might need GitHub write access to push code. Fine — but to which repos? During what phase of work? When it's doing exploratory research vs. when it's opening a PR? The access profile of an AI agent isn't static. It shifts with context. It shifts with the task. It shifts as the conversation history get compacted.
+A coding agent might need GitHub write access to push code. Fine — but to which repos? During what phase of work? When it's doing exploratory research vs. when it's opening a PR? The access profile of an AI agent isn't static. It shifts with context. It shifts with the task. It shifts as the conversation history gets compacted.
 
 How do you govern least privilege for a system whose behavior you cannot fully predict?
 
