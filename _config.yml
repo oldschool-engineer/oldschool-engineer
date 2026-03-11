@@ -79,6 +79,7 @@ plugins:
 # https://jekyllrb.com/docs/configuration/options/#global-configuration
 exclude:
   - .github
+  - CLAUDE.md
 
 # Search — client-side via Lunr.js, no server required
 # https://mmistakes.github.io/minimal-mistakes/docs/configuration/#site-search
