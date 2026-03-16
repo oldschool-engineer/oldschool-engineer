@@ -27,7 +27,7 @@ I architect systems that span the entire stack—from network infrastructure and
 
 My pinned repositories showcase a **distributed real-time market data system** I built from scratch after leaving Amazon—a production-grade platform processing 1,000+ events/second:
 
-> 📖 **[Read the full documentation →](https://kuhl-haus-mdp.readthedocs.io/en/latest/)**
+> 📖 **[Read the full documentation →](https://kuhl-haus-mdp.readthedocs.io/en/latest/readme.html)**
 > Architecture, module references, contribution guide, security policy, and detailed changelog — because real
 > engineering projects have real documentation.
 
