@@ -18,7 +18,7 @@ I architect systems that span the entire stack—from network infrastructure and
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 
 * **Infrastructure:** AWS, Bare-Metal, Kubernetes, Docker, Ansible  
-* **Security & Identity:** IAM, Active Directory, SAML, OIDC, OAuth 2.0, MFA, RADIUS  
+* **Security & Identity:** Active Directory, SAML, OIDC, MFA, RADIUS  
 * **Programming & Frameworks:** Python, C#, TypeScript, Go, Ruby, Java \| .NET/ASP.NET, Django, py4web, Vue.js, FastAPI  
 * **Observability:** OpenTelemetry, Prometheus, Grafana, Graphite, Distributed Tracing  
 * **Networking & Protocols:** DNS, Load Balancing, Traffic Shaping, TCP/IP, HTTP/HTTPS, TLS/SSL, VPN, Network Architecture, Distributed Systems  
