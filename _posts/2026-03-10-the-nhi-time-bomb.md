@@ -11,6 +11,7 @@ tags:
   - security
   - identity
   - nhi
+  - legion
 ---
 
 ## Your NHI Governance Wasn't Ready For AI Agents. Neither Was Mine.

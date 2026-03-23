@@ -8,6 +8,7 @@ tags:
   - automation
   - open-source
   - llm
+  - legion
 ---
 
 ***Not a chatbot. Not a copilot. A peer.***
