@@ -10,13 +10,11 @@ tags:
   - llm
 ---
 
-# LLM Arithmetic Reliability Test — 2026-03-23
-
-**Model:** Claude Sonnet 4.6 (This model was chosen because it is the default model that I use for OpenClaw.)
-**Tester:** Tom Pounders
-**Date:** March 23, 2026
-**Total problems:** 41
-**Overall accuracy:** 20/41 = **49%**
+**Model:** Claude Sonnet 4.6 (This model was chosen because it is the default model that I use for OpenClaw.)  
+**Tester:** Tom Pounders  
+**Date:** March 23, 2026  
+**Total problems:** 41  
+**Overall accuracy:** 20/41 = **49%**  
 
 ---
 
