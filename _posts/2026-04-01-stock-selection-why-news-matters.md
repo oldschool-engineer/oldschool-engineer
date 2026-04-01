@@ -102,25 +102,25 @@ The first four tiers (red through white) are active catalysts. Blue and dark are
 
 ---
 
-# What Else Shipped
+## What Else Shipped
 
 The news feed wasn't the only thing that landed in this release. A few other things worth mentioning:
 
-## Widget linking
+### Widget linking
 
 Widgets can be linked on a shared color bus. Change the symbol in one linked widget and it propagates to the others. Makes navigating between scanners, news, and quotes frictionless.
 
 ![](/assets/images/posts/stock-selection-why-news-matters/img-06.png)
 *Screenshot: Red bus = these three widgets talk to each other. When one ticker changes, they all update.*
 
-## Quote widget
+### Quote widget
 
 Enter a symbol or link it to another widget, and you get real-time quote data. Simple, fast, does what it says. What I love about this: MDP already maintains real-time quote data for every stock in the market. The quote widget is the first way to actually surface it for tickers that aren't on any scanner. That data was always there — now I can use it.
 
 ![](/assets/images/posts/stock-selection-why-news-matters/img-07.png)
 *Screenshot: AAPL's on the color bus — the quote loaded, the news followed, and that ![](/assets/images/posts/stock-selection-why-news-matters/flame-orange.svg) means something happened recently worth knowing about.*
 
-## Layout lock + toggle autosave
+### Layout lock + toggle autosave
 
 Lock the layout so you don't accidentally drag things around during a session. Toggle autosave so changes persist (or don't) on your terms.
 
@@ -150,7 +150,7 @@ Click the pause icon to enable autosave
 
 Click the autosave icon to disable autosave.
 
-## Full scanner widget customization
+### Full scanner widget customization
 
 All controls on the scanners can now be set to custom values and saved in your layout.  Each widget has a name. Widgets with the same name share saved settings — so if you want a widget to keep its own config, give it a unique name. Double-click the title (long-press on mobile) to rename. You can also resize and hide columns.
 
@@ -160,7 +160,7 @@ All controls on the scanners can now be set to custom values and saved in your l
 ![](/assets/images/posts/stock-selection-why-news-matters/img-13.png)
 *Screenshot: Gear → column visibility. Show what's relevant, hide the noise — each scanner can have its own config.*
 
-## Data freshness icon
+### Data freshness icon
 
 All widgets show a status icon that covers both data freshness and connection state.
 
@@ -174,7 +174,7 @@ Every widget header shows this at a glance:
 | 🔵 / 🟣 | Reconnecting (pulsing)                     |     |
 | ❌       | Disconnected                               |     |
 
-## Free float cleanup
+### Free float cleanup
 
 Free float data was previously pulling from an experimental API via raw aiohttp. It's now going through [Massive's RESTClient](https://github.com/massive-com/client-python) instead. Still an experimental API on the data side, but the client layer is cleaner and it's been solid in practice.
 
