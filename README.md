@@ -38,7 +38,7 @@ My pinned repositories showcase a **distributed real-time market data system** I
 | [kuhl-haus-mdp-app](https://github.com/kuhl-haus/kuhl-haus-mdp-app) | Frontend & service control plane |
 | [kuhl-haus-mdp-deployment](https://github.com/kuhl-haus/kuhl-haus-mdp-deployment) | Kubernetes & Ansible automation |
 
-**Tech stack:** Kubernetes • Redis • RabbitMQ • FastAPI • py4web • OIDC • OpenTelemetry
+**Tech stack:** Kubernetes • Redis • RabbitMQ • FastAPI • py4web • OpenTelemetry
 
 ## 🏠 Kuhl Haus Organization
 
