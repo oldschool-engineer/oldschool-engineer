@@ -43,7 +43,6 @@ Skills in OpenClaw are modular — each one gives Legion a specific capability. 
 - **mcporter** — manages MCP server connections and tool calls
 - **nano-pdf** — edits PDFs with natural-language instructions
 - **healthcheck** — security auditing and hardening on the systems it runs on
-- **xurl** — authenticated X API access
 
 **What Legion does not have: no community skills. Zero.**
 
