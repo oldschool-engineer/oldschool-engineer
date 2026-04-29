@@ -23,7 +23,7 @@ Here's what landed.
 *My default day trading layout. Damn near everything I need on one screen — and yes, almost every widget here is wired into the same event bus. Click a row in Range Alerts or a scanner, or manually enter a ticker in the quote widget, and watch the rest catch up. (TV Lite charts shown.)*
 
 
-#### The Data Plane Gets a New Scanner
+## The Data Plane Gets a New Scanner
 
 Wave 2 introduces a new server: the Market Data Scanner (MDS). The MDS consumes the streams emitted from the Market Data Processors (MDP) and, like MDP, uses pluggable analyzers. This wave introduces the first one: `DailyRangeAnalyzer` (DRA). It tracks high-of-day and low-of-day across every session and emits to three feeds: `daily_range:{ticker}`, `daily_range_hod_alert`, and `daily_range_lod_alert`. The new enhanced quote and range alert widgets are fed by these.
 
@@ -31,7 +31,7 @@ The lesson from Wave 1 was that a pluggable data plane is worth the up-front pai
 
 I'm probably renaming the `daily_range:{ticker}` feed to `enhanced_quote`. The current name made sense when DRA was the only consumer. It isn't anymore.
 
-#### Enhanced Quote Widgets
+## Quote Widgets Revamp
 
 The motivation here was simple: I wanted one widget that showed session highs/lows plus all the stuff I was tab-hopping for — company info, recent splits, SEC filings, and ticker events (e.g., like when Facebook (FB) became Meta Platforms (META)). The architecture is straightforward: DRA passes quote data through over WebSocket; the widget pulls supplemental data via REST.
 
@@ -41,7 +41,9 @@ The lesson: a cache only earns its keep when the upstream is slow or rate-limite
 
 Two widgets, both fed by DRA for quote data (WebSocket) and supplemental data via REST:
 
-**EQv3 (Quote widget)** — column layout. Cards: Hero, Today, Previous Day, Volume, Session H/L, Short Interest, Company. Show, hide, reorder, pick a single-column, two-column, or wide layout.
+### Quote Widget (EQv3)
+
+This replaces the old quote widget, which was renamed to "Mini Quote".  This widget uses a column layout with the following cards: Hero, Today, Previous Day, Volume, Session H/L, Short Interest, Company. Customization options include: show, hide, reorder, pick a single-column, two-column, or wide layout.
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-01.png)  
 *EQv3 out of the box. Column layout, sensible defaults, minimal knobs. "Minimal" is the feature here — I wanted something I could drop on a dashboard without thinking.*
@@ -53,7 +55,9 @@ Two widgets, both fed by DRA for quote data (WebSocket) and supplemental data vi
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-03.png)  
 *Wide mode. Same cards, more horizontal real estate — handy when you've got a 4K monitor and not enough widgets to fill it. (You will eventually have enough widgets.)*
 
-**EQv4 (Enhanced Quote widget)** — grid layout. All the EQv3 cards plus SEC EDGAR Index, Stock Splits, Ticker Events, and Company News. (EQv4 calls Finlight directly for the Company News card — it doesn't go through the Widget Data Service like the standalone Company News widget does.)
+### Enhanced Quote widget (EQv4) 
+
+This is my preferred quote widget.  It is highly customizable because it uses a grid layout. It has all the EQv3 cards plus SEC EDGAR Index, Stock Splits, Ticker Events, and Company News. (EQv4 calls Finlight directly for the Company News card — it doesn't go through the Widget Data Service like the standalone Company News widget does.)
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-04.png)  
 *EQv4 out of the box. Yeah, I know. This is the price you pay for a grid layout — flexibility on one end, "WTF am I looking at" on the other. Stick with me.*
@@ -72,13 +76,28 @@ Two widgets, both fed by DRA for quote data (WebSocket) and supplemental data vi
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-08.png)  
 *Five different EQv4 layouts, same underlying widget. Pick your poison: scanner-view, news-heavy, chart-companion, whatever fits the dashboard slot.*
 
+### SEC EDGAR Index, Stock Splits, and Ticker Events cards
+
+I primarily trade on technical indicators but it is good to understand what the company has been up to behind the scenes.  Is this a company that chronically reverse splits and/or dilutes shareholder value?  Do they have any active shelf registrations?  Is this a notoriously bad stock that has recently changed tickers?  These cards help answer all these questions without opening another browser tab.
+
+
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/beware-of-dilution-risks.png)  
+*Beware of dilution risks! Companies with active shelf registrations and a history of financial troubles often sell shares on the open market after a big move up.  I'm using FCEL as an example but I'm not saying FCEL is going through financial hardships or that they are going to sell shares. I'm saying that they can so, take that into consideration if you're trading a stock with active shelf registrations or other filings that present a dilution risk.*
+
+
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/jfbr-renamed-nexr-you-cant-hide-from-me.png)  
+*Jeff's Brands (JFBR) rebranded as Nexera Technologies Ltd (NEXR) but I'm not fooled by the name change.*
+
+
+
+### Mini Quote (the OG)
 
 The original "Quote" widget — the dumb one that only reads the symbol data cache — got renamed to **Mini Quote**. Same widget, more honest name.
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-09.png)  
 *The artist formerly known as "Quote." Did its job in the early days. These days it lives in the widget library, gathering dust.*
 
-**Company News Card vs Company News Widget**
+### EQv4 Company News Card vs Company News Widget
 
 The Company News Widget gets news that is cached in the WDC after being processed by the Finlight Data Processor (FDP).  In addition to caching articles that are tagged by Finlight, The FDP searches the title and summary for stock tickers and adds them to the Company News feed.  In the case of the MYSE surge on 4/16/2026, Finlight didn't tag the news article about their rebranding to Myseum.AI.  However, the FDP caught it and added it to the Company News feed.
 
@@ -86,7 +105,7 @@ The Company News Widget gets news that is cached in the WDC after being processe
 *Three widgets, same ticker, same moment. Only the Company News feed caught the Myseum.AI rebrand article — the Card and the News Feed were both blind to it. This is exactly the kind of gap I'm trying to close in Wave 3.*
 
 
-#### Range Alerts Widget
+## Range Alerts Widget
 
 HOD/LOD alerts are noisy. Like, *Saturn V rocket launch* noisy. So this widget leans heavily on filters to surface only the tickers matching your criteria, and those settings persist with your layout. Drop it in HOD or LOD mode, wire it to the event bus, and clicking a row lights up that ticker across every linked widget on the dashboard. Flip on "filter" mode and the Range Alerts widget itself collapses down to just that ticker too — which makes it easy to spot when a ticker has successively breached previous HOD or LOD thresholds.
 
@@ -104,7 +123,7 @@ HOD/LOD alerts are noisy. Like, *Saturn V rocket launch* noisy. So this widget l
 
 [The Flame System I introduced last month]({% post_url 2026-04-01-stock-selection-why-news-matters %}#the-flame-system) is going to do a lot of work here once Wave 3 lands. A red flame on a ticker that just breached HOD? That's the signal I've been trying to build toward for six months.
 
-#### Charts (Finally)
+## Charts (Finally)
 
 I'm a momentum trader. My screening loop is brutal: look at the daily and 5-minute charts, check moving averages, VWAP, volume, average volume, and MACD. Decide in five seconds whether a ticker deserves more attention. The old workflow — manually typing tickers into TradingView dozens of times a morning — was wrecking my flow.
 
@@ -126,7 +145,7 @@ Both ship the same indicators: 3 EMAs, 2 SMAs, 2 VWMAs, VWAP, volume + average v
 
 Why two chart libraries? Because TradingView Lightweight Charts don't support custom indicators — that's a paid-tier feature, and PineScript only runs on TradingView's platform anyway. ECharts gives me a path to eventually port my [Momentum Indicators PineScript](https://www.tradingview.com/script/krYt35wa-Momentum-Indicators/) to something I actually own. Whether that hill is worth dying on is a Wave 3 problem.
 
-#### What's Next
+## What's Next
 
 Wave 2 is about finding stocks worth trading. Iteration 8 just shipped, Iteration 9 is in flight, and by the time it wraps we'll be there.
 
