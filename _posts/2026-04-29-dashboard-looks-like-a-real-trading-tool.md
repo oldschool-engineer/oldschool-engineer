@@ -53,7 +53,7 @@ This replaces the old quote widget, which was renamed to "Mini Quote".  This wid
 *Same widget, every default flipped: icon over logo, chips over lists. Hero card is the only one you can't hide — everything else is fair game.*
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-03.png)  
-*Wide mode. Same cards, more horizontal real estate — handy when you've got a 4K monitor and not enough widgets to fill it. (You will eventually have enough widgets.)*
+*Wide mode. Same cards, more horizontal real estate — handy when you've got an ultra-wide monitor and want to economize on vertical real-estate.*
 
 ### Enhanced Quote widget (EQv4) 
 
@@ -64,7 +64,6 @@ This is my preferred quote widget.  It is highly customizable because it uses a 
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-05.png)  
 *Same unusable default, now with the four new cards added: Company News, Stock Splits, SEC EDGAR, and Ticker Events. Still a mess. Customization comes next.*
-
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-06.png)  
 *Edit mode. Drag cards anywhere on the grid, dial in column count and row height, swap chips for lists. The unusable default from the last two screenshots becomes whatever you need.*
@@ -135,7 +134,7 @@ There are two implementations with feature parity for now:
 - **TV Lite Chart** — TradingView Lightweight Charts
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-14.png)  
-*Apache ECharts implementation. Daily chart on top, 5-minute on the bottom — both with my standard indicator stack: 9/21/200 EMA, 50 VWMA, 200 SMA, VWAP, volume, and MACD.*
+*Apache ECharts implementation. Daily chart on left, 5-minute on the right — both with my standard indicator stack: 9/21/200 EMA, 50 VWMA, 200 SMA, VWAP, volume, and MACD.*
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-15.png)  
 *Same indicators, TradingView Lightweight Charts. Feature parity for now. Any custom indicator work will have to live in ECharts.*
@@ -143,7 +142,7 @@ There are two implementations with feature parity for now:
 
 Both ship the same indicators: 3 EMAs, 2 SMAs, 2 VWMAs, VWAP, volume + average volume, and MACD. The default moving average setup mirrors what I run on 80% of my own charts: 9 EMA, 21 EMA, 50 VWMA, 200 EMA, 200 SMA. (When I'm swing trading, I swap in the 50 SMA and 9 VWMA on a couple of charts.)
 
-Why two chart libraries? Because TradingView Lightweight Charts don't support custom indicators — that's a paid-tier feature, and PineScript only runs on TradingView's platform anyway. ECharts gives me a path to eventually port my [Momentum Indicators PineScript](https://www.tradingview.com/script/krYt35wa-Momentum-Indicators/) to something I actually own. Whether that hill is worth dying on is a Wave 3 problem.
+Why two chart libraries? Because TradingView Lightweight Charts don't support custom indicators — that's a paid-tier feature, and PineScript only runs on TradingView's platform anyway. ECharts gives me a path to eventually port my [Momentum Indicators PineScript](https://www.tradingview.com/script/krYt35wa-Momentum-Indicators/) to something I actually own. Whether that hill is worth dying on is to be determined but I'm certainly going to try.
 
 ## What's Next
 
