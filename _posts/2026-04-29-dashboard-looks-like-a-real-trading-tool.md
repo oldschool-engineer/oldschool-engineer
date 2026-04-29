@@ -19,8 +19,8 @@ Three goals drove this iteration:
 
 Here's what landed.
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/all-scanners-eqv4-tv-lite-charts.png)
-*Screenshot: This is my default day trading layout with damn near everything crammed in.  This layout uses the TV Lite charts.*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/all-scanners-eqv4-tv-lite-charts.png)  
+*My default day trading layout. Damn near everything I need on one screen — and yes, every widget here is wired into the same event bus. Click a row in Range Alerts and watch the rest catch up. (TV Lite charts shown.)*
 
 
 #### The Data Plane Gets a New Scanner
@@ -43,62 +43,62 @@ Two widgets, both fed by DRA for quote data (WebSocket) and supplemental data vi
 
 **EQv3 (Quote widget)** — column layout. Cards: Hero, Today, Previous Day, Volume, Session H/L, Short Interest, Company. Show, hide, reorder, pick a single-column, two-column, or wide layout.
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-01.png)
-*Screenshot: The default EQv3 Quote layout. The advantage of EQv3 is a simple column-based layout.  You can re-order the cards and change some of them from list to chips but the configuration options are minimal - as a strength.*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-01.png)  
+*EQv3 out of the box. Column layout, sensible defaults, minimal knobs. "Minimal" is the feature here — I wanted something I could drop on a dashboard without thinking.*
 
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-02.png)
-*Screenshot: The EQv3 quote in edit mode with all the default options flipped to their non-default settings. Icon instead of logo, chips instead of lists. All cards except for the hero can be hidden, if desired.*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-02.png)  
+*Same widget, every default flipped: icon over logo, chips over lists, cards reordered. Hero card is the only one you can't hide — everything else is fair game.*
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-03.png)
-*Screenshot: EQv3 quote in wide-mode*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-03.png)  
+*Wide mode. Same cards, more horizontal real estate — handy when you've got a 4K monitor and not enough widgets to fill it. (You will eventually have enough widgets.)*
 
 **EQv4 (Enhanced Quote widget)** — grid layout. All the EQv3 cards plus SEC EDGAR Index, Stock Splits, Ticker Events, and Company News. (EQv4 calls Finlight directly for the Company News card — it doesn't go through the Widget Data Service like the standalone Company News widget does.)
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-04.png)
-*Screenshot: The default EQv4 layout is un-usable. This is the disadvantage it has over EQv3.*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-04.png)  
+*EQv4 out of the box. Yeah, I know. This is the price you pay for a grid layout — flexibility on one end, "WTF am I looking at" on the other. Stick with me.*
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-05.png)
-*Screenshot: On the flipside, it is far more customizaable. This shows the addition of the Company News, Stock Splits, SEC EDGAR, and Ticker Events cards.*
-
-
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-06.png)
-*Screenshot: EQv4 in edit mode revealing tools to customize the layout. EQv4 uses a Grid Layout. Adjust Cols and Row H to customize your grid proportions. Choose between "chips" and "list".*
-
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-07.png)
-*Screenshot: Hero card can choose between wide and narrow layouts as well as displaying the logo or icon.*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-05.png)  
+*Same unusable default, now with the four new cards added: Company News, Stock Splits, SEC EDGAR, and Ticker Events. Still a mess. Customization comes next.*
 
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-08.png)
-*Screenshot: 5 different configurations of EQv4 widget - this demonstrates how customizable this widget is*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-06.png)  
+*Edit mode. Drag cards anywhere on the grid, dial in column count and row height, swap chips for lists. The unusable default from the last two screenshots becomes whatever you need.*
+
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-07.png)  
+*The Hero card has its own knobs: wide or narrow, logo or icon.*
+
+
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-08.png)  
+*Five different EQv4 layouts, same underlying widget. Pick your poison: scanner-view, news-heavy, chart-companion, whatever fits the dashboard slot.*
 
 
 The original "Quote" widget — the dumb one that only reads the symbol data cache — got renamed to **Mini Quote**. Same widget, more honest name.
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-09.png)
-*Screenshot: The mini quote: basic but served its purpose in the early days.  Now, it never sees the light of day.*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-09.png)  
+*The artist formerly known as "Quote." Did its job in the early days. These days it lives in the widget library, gathering dust.*
 
 **Company News Card vs Company News Widget**
 
-The Company News Widget gets news that is cached in the WDC after being processed by the Finlight Data Processor (FDP).  In addition to caching articles that are tagged by Finlight, The FDP searches the title and summary for stock tickers and adds them to the Company News feed.  In the case of the MYSE surge on 4/16/2026, Finlight didn't tag the news article about their rebrading to Myseum.AI.  However, the FDP caught it and added it to the Company News feed.
+The Company News Widget gets news that is cached in the WDC after being processed by the Finlight Data Processor (FDP).  In addition to caching articles that are tagged by Finlight, The FDP searches the title and summary for stock tickers and adds them to the Company News feed.  In the case of the MYSE surge on 4/16/2026, Finlight didn't tag the news article about their rebranding to Myseum.AI.  However, the FDP caught it and added it to the Company News feed.
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-10.png)
-*Screenshot: Company News feed has "(positive sentiment) Myseum Shares Surge After Rebrand to Myseum.AI -- benzinga" while Company News Card and News Feed have nothing.*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-10.png)  
+*Three widgets, same ticker, same moment. Only the Company News feed caught the Myseum.AI rebrand article — the Card and the News Feed were both blind to it. This is exactly the kind of gap I'm trying to close in Wave 3.*
 
 
 #### Range Alerts Widget
 
 HOD/LOD alerts are noisy. Like, *Saturn V rocket launch* noisy. So this widget leans heavily on filters to surface only the tickers matching your criteria, and those settings persist with your layout. Drop it in HOD or LOD mode, wire it to the event bus, and clicking a row lights up that ticker across every linked widget on the dashboard. Flip on "filter" mode and the Range Alerts widget itself collapses down to just that ticker too — which makes it easy to spot when a ticker has successively breached previous HOD or LOD thresholds.
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-11.png)
-*Screenshot: Range alerts widget*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-11.png)  
+*Range Alerts in normal mode. New HOD/LOD breaches stream in live; click a row and the rest of the dashboard pivots to that ticker.*
 
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-12.png)
-*Screenshot: Range alerts widget settings for day trading: $2-$20, 20M max float, 1x rel vol, 1% min change*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-12.png)  
+*My day-trading filter settings: $2–$20 price, 20M max float, 1× relative volume, 1% minimum change. Without these, the feed is unreadable. With them, most alerts are at least worth the click to look at the charts.*
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-13.png)
-*Screenshot: Range alerts widget settings in filter mode showing only HOD alerts for NOK.*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-13.png)  
+*Filter mode locked onto NOK. Now I can watch successive HOD breaches on a single ticker without the rest of the market screaming for attention. This is how I spot momentum building in real time.*
 
 
 
@@ -115,11 +115,11 @@ There are two implementations with feature parity for now:
 - **Candlestick Chart** — Apache ECharts
 - **TV Lite Chart** — TradingView Lightweight Charts
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-14.png)
-*Screenshot: ECharts 1d and 5m with my default day trading layout*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-14.png)  
+*Apache ECharts implementation. Daily chart on top, 5-minute on the bottom — both with my standard indicator stack: 9/21/200 EMA, 50 VWMA, 200 SMA, VWAP, volume, and MACD.*
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-15.png)
-*Screenshot: TV Lite charts 1d and 5m with my default day trading layout*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-15.png)  
+*Same indicators, TradingView Lightweight Charts. Feature parity for now — but the second I want a custom indicator from my PineScript library, ECharts is where it'll have to live.*
 
 
 Both ship the same indicators: 3 EMAs, 2 SMAs, 2 VWMAs, VWAP, volume + average volume, and MACD. The default moving average setup mirrors what I run on 80% of my own charts: 9 EMA, 21 EMA, 50 VWMA, 200 EMA, 200 SMA. (When I'm swing trading, I swap in the 50 SMA and 9 VWMA on a couple of charts.)
