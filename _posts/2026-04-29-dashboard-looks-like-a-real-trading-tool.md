@@ -20,7 +20,7 @@ Three goals drove this iteration:
 Here's what landed.
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/all-scanners-eqv4-tv-lite-charts.png)  
-*My default day trading layout. Damn near everything I need on one screen — and yes, almost every widget here is wired into the same event bus. Click a row in Range Alerts or a scanner, or manually enter a ticker in the quote widget, and watch the rest catch up. (TV Lite charts shown.)*
+*My default day trading layout. Damn near everything I need on one screen — and yes, that's three different news widgets. I'm still figuring out which combination I actually use; the unfiltered News Feed stays unlinked on purpose so I always have one view that isn't pinned to a single ticker. Everything else pivots in lockstep when I click a row in Range Alerts, click a row in any scanner, or type a ticker into the quote widget. (TV Lite charts shown.)*
 
 
 ## The Data Plane Gets a New Scanner
@@ -53,7 +53,7 @@ This replaces the old quote widget, which was renamed to "Mini Quote".  This wid
 *Same widget, every default flipped: icon over logo, chips over lists. Hero card is the only one you can't hide — everything else is fair game.*
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-03.png)  
-*Wide mode. Same cards, more horizontal real estate — handy when you've got an ultra-wide monitor and want to economize on vertical real-estate.*
+*Wide mode. Same cards laid out horizontally — handy on ultra-wide monitors where vertical space is the scarce resource.*
 
 ### Enhanced Quote widget (EQv4) 
 
@@ -77,7 +77,7 @@ This is my preferred quote widget.  It is highly customizable because it uses a 
 
 ### SEC EDGAR Index, Stock Splits, and Ticker Events cards
 
-I primarily trade on technical indicators but it is good to understand what the company has been up to behind the scenes.  Is this a company that chronically reverse splits and/or dilutes shareholder value?  Do they have any active shelf registrations?  Is this a notoriously bad stock that has recently changed tickers?  These cards help answer all these questions without opening another browser tab.
+I trade on technicals — but a 200% morning gap doesn't matter if the company's about to dump shares on you. Is this a company that chronically reverse splits and/or dilutes shareholder value?  Do they have any active shelf registrations?  Is this a notoriously bad stock that has recently changed tickers?  These cards help answer all these questions without opening another browser tab.
 
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/beware-of-dilution-risks.png)  
