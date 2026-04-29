@@ -48,7 +48,7 @@ Two widgets, both fed by DRA for quote data (WebSocket) and supplemental data vi
 
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-02.png)  
-*Same widget, every default flipped: icon over logo, chips over lists, cards order remains unchanged. Hero card is the only one you can't hide — everything else is fair game.*
+*Same widget, every default flipped: icon over logo, chips over lists. Hero card is the only one you can't hide — everything else is fair game.*
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-03.png)  
 *Wide mode. Same cards, more horizontal real estate — handy when you've got a 4K monitor and not enough widgets to fill it. (You will eventually have enough widgets.)*
@@ -66,7 +66,7 @@ Two widgets, both fed by DRA for quote data (WebSocket) and supplemental data vi
 *Edit mode. Drag cards anywhere on the grid, dial in column count and row height, swap chips for lists. The unusable default from the last two screenshots becomes whatever you need.*
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-07.png)  
-*The Hero card has its own knobs: wide or narrow, logo or icon.*
+*The Hero card has its own knobs. Because of course it does.*
 
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-08.png)  
@@ -119,7 +119,7 @@ There are two implementations with feature parity for now:
 *Apache ECharts implementation. Daily chart on top, 5-minute on the bottom — both with my standard indicator stack: 9/21/200 EMA, 50 VWMA, 200 SMA, VWAP, volume, and MACD.*
 
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-15.png)  
-*Same indicators, TradingView Lightweight Charts. Feature parity for now — but the lightweight charts are limited.  Any customization beyond the basics will have to be with ECharts.*
+*Same indicators, TradingView Lightweight Charts. Feature parity for now. Any custom indicator work will have to live in ECharts.*
 
 
 Both ship the same indicators: 3 EMAs, 2 SMAs, 2 VWMAs, VWAP, volume + average volume, and MACD. The default moving average setup mirrors what I run on 80% of my own charts: 9 EMA, 21 EMA, 50 VWMA, 200 EMA, 200 SMA. (When I'm swing trading, I swap in the 50 SMA and 9 VWMA on a couple of charts.)
