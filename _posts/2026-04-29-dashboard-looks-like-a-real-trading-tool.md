@@ -1,6 +1,6 @@
 ---
 title: "The Stock Scanner Dashboard Finally Looks Like a Real Trading Tool"
-excerpt: "One iteration. Charts, range alerts, two new quote widgets, and a UI that can finally hold them all."
+excerpt: "Wave 2 of my custom stock scanner: real-time HOD/LOD alerts, candlestick charts, and quote widgets that finally kill the TradingView alt-tab habit."
 categories:
   - Side Projects
 tags:
@@ -13,7 +13,7 @@ In [Part 5]({% post_url 2026-02-23-what-i-built-after-quitting-amazon-spoiler-it
 
 Three goals drove this iteration:
 
-1. A quote widget that tells me everything about a ticker without alt-tabbing to four browser tabs.
+1. A quote widget that tells me everything about a ticker without alt-tabbing to other tools.
 2. Streaming HOD/LOD alerts so I stop missing breakouts while I'm looking at something else.
 3. Just enough charting to triage tickers without bouncing to TradingView every thirty seconds.
 
@@ -35,7 +35,7 @@ I'm probably renaming the `daily_range:{ticker}` feed to `enhanced_quote`. I'm n
 
 The motivation here was simple: I wanted one widget that showed session highs/lows plus all the stuff I was tab-hopping for — company info, recent splits, SEC filings, and ticker events (e.g., like when Facebook (FB) became Meta Platforms (META)). The architecture is straightforward: DRA passes quote data through over WebSocket; the widget pulls supplemental data via REST.
 
-Easy on paper. EQv1 and EQv2 were disasters anyway. Both hit a py4web REST API with WDC caching, and — technically speaking — *slower than shit*. Deprecated. We don't talk about them.
+Easy on paper. EQv1 and EQv2 were disasters anyway. Both hit a py4web REST API with the Widget Data Cache (WDC) caching, and — technically speaking — *slower than shit*. Deprecated. We don't talk about them.
 
 The lesson: a cache only earns its keep when the upstream is slow or rate-limited. Mine isn't either. Unlimited API calls, fast providers — every millisecond of cache lookup was pure overhead, plus a staleness bug waiting to happen. Complexity with no tangible payoff. EQv3 and EQv4 ditch the py4web middleman entirely and consume directly from Massive.com and Finlight. Async. No caching. Way faster.
 
