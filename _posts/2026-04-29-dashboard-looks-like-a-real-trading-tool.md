@@ -29,7 +29,7 @@ Wave 2 introduces a new server: the Market Data Scanner (MDS). The MDS consumes 
 
 The lesson from Wave 1 was that a pluggable data plane is worth the up-front pain. The MDS/DRA pairing follows that pattern: it's the first analyzer to slot in, but it won't be the last. When pillar-correlation scanners come online (the ones I teased at the [end of the news post]({% post_url 2026-04-01-stock-selection-why-news-matters %}#whats-next)), they'll plug in the same way.
 
-I'm probably renaming the `daily_range:{ticker}` feed to `enhanced_quote`. The current name made sense when DRA was the only consumer. It isn't anymore.
+I'm probably renaming the `daily_range:{ticker}` feed to `enhanced_quote`. I'm not sure WTF I was thinking when I named it.
 
 ## Quote Widgets Revamp
 
