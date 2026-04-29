@@ -97,6 +97,9 @@ HOD/LOD alerts are noisy. Like, *Saturn V rocket launch* noisy. So this widget l
 ![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-12.png)
 *Screenshot: Range alerts widget settings for day trading: $2-$20, 20M max float, 1x rel vol, 1% min change*
 
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-13.png)
+*Screenshot: Range alerts widget settings in filter mode showing only HOD alerts for NOK.*
+
 
 
 [The Flame System I introduced last month]({% post_url 2026-04-01-stock-selection-why-news-matters %}#the-flame-system) is going to do a lot of work here once Wave 3 lands. A red flame on a ticker that just breached HOD? That's the signal I've been trying to build toward for six months.
@@ -112,9 +115,11 @@ There are two implementations with feature parity for now:
 - **Candlestick Chart** — Apache ECharts
 - **TV Lite Chart** — TradingView Lightweight Charts
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-00.png)
-*Screenshot: *
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-14.png)
+*Screenshot: ECharts 1d and 5m with my default day trading layout*
 
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/image-15.png)
+*Screenshot: TV Lite charts 1d and 5m with my default day trading layout*
 
 
 Both ship the same indicators: 3 EMAs, 2 SMAs, 2 VWMAs, VWAP, volume + average volume, and MACD. The default moving average setup mirrors what I run on 80% of my own charts: 9 EMA, 21 EMA, 50 VWMA, 200 EMA, 200 SMA. (When I'm swing trading, I swap in the 50 SMA and 9 VWMA on a couple of charts.)
