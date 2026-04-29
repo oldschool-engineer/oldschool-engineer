@@ -1,6 +1,6 @@
 ---
 title: "The Stock Scanner Dashboard Finally Looks Like a Real Trading Tool"
-excerpt: ""
+excerpt: "One iteration. Charts, range alerts, two new quote widgets, and a UI that can finally hold them all."
 categories:
   - Side Projects
 tags:
