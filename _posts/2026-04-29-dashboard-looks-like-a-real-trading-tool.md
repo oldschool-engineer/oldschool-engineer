@@ -85,8 +85,8 @@ I primarily trade on technical indicators but it is good to understand what the 
 *Beware of dilution risks! Companies with active shelf registrations and a history of financial troubles often sell shares on the open market after a big move up.  I'm using FCEL as an example but I'm not saying FCEL is going through financial hardships or that they are going to sell shares. I'm saying that they can so, take that into consideration if you're trading a stock with active shelf registrations or other filings that present a dilution risk.*
 
 
-![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/jfbr-renamed-nexr-you-cant-hide-from-me.png)  
-*Jeff's Brands (JFBR) rebranded as Nexera Technologies Ltd (NEXR) but I'm not fooled by the name change.*
+![](/assets/images/posts/dashboard-looks-like-a-real-trading-tool/fb-renamed-meta.png)  
+*Remember when Mark renamed the company from Facebook (FB) to Meta Platforms (META) because of the metaverse?  How'd that turn out? Oh. Yeah. I wonder if he'll rename the company again now that AI is the big bet...*
 
 
 
