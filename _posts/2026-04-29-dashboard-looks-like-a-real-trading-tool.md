@@ -25,7 +25,7 @@ Here's what landed.
 
 #### The Data Plane Gets a New Scanner
 
-Wave 2 introduces a new server: the Market Data Scanner (MDS). The MDS consumes the streams emitted from the Market Data Processors (MDP) and, like MDP, uses pluggable analyzers. This wave introduces the first one: `DailyRangeAnalyzer` (DRA). It tracks high-of-day and low-of-day across every session and emits to three feeds: `daily_range:{ticker}`, `daily_range_hod_alert`, and `daily_range_lod_alert`. The new enhanced quote widgets and the range alert feeds are fed by these.
+Wave 2 introduces a new server: the Market Data Scanner (MDS). The MDS consumes the streams emitted from the Market Data Processors (MDP) and, like MDP, uses pluggable analyzers. This wave introduces the first one: `DailyRangeAnalyzer` (DRA). It tracks high-of-day and low-of-day across every session and emits to three feeds: `daily_range:{ticker}`, `daily_range_hod_alert`, and `daily_range_lod_alert`. The new enhanced quote and range alert widgets are fed by these.
 
 The lesson from Wave 1 was that a pluggable data plane is worth the up-front pain. The MDS/DRA pairing follows that pattern: it's the first analyzer to slot in, but it won't be the last. When pillar-correlation scanners come online (the ones I teased at the [end of the news post]({% post_url 2026-04-01-stock-selection-why-news-matters %}#whats-next)), they'll plug in the same way.
 
