@@ -7,7 +7,7 @@ tags:
   - kubernetes
   - ansible
   - deployment
-  - market-data
+  - kuhl-haus-mdp
 ---
 
 ***Deployment and infrastructure — Production deployment strategies and cost optimization techniques***

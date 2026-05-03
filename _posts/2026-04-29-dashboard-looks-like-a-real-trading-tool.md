@@ -6,7 +6,7 @@ categories:
 tags:
   - stocks
   - trading
-  - market-data
+  - kuhl-haus-mdp
 ---
 
 In [Part 5]({% post_url 2026-02-23-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner-part-5 %}#looking-forward-the-four-waves), I laid out the roadmap as a SIGINT fire-control problem: Broad Search, Target Acquisition, Target Lock, Fire. Wave 1 proved the architecture could swallow 1,490 messages per second at market close without flinching. Wave 2 is about deciding *which of those tickers actually deserves my attention*.

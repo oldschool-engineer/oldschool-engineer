@@ -6,7 +6,7 @@ categories:
 tags:
   - docker
   - deployment
-  - market-data
+  - kuhl-haus-mdp
 ---
 
 ***Building your own: Step-by-step guide to running it on your own machine***

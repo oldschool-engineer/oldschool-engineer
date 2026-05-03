@@ -7,7 +7,7 @@ tags:
   - opentelemetry
   - observability
   - performance
-  - market-data
+  - kuhl-haus-mdp
 ---
 
 ***The Evolution from Prototype to Production: A Case Study in Deliberate Design Iteration***

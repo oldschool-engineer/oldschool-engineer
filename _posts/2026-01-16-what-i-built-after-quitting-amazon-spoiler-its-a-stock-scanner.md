@@ -8,7 +8,7 @@ tags:
   - rabbitmq
   - redis
   - vue
-  - market-data
+  - kuhl-haus-mdp
 ---
 
 After over 10 years at Amazon, I quit my job as a Senior Software Development Engineer in March 2025. Why I quit isn’t important right now. What matters is what I’ve been up to for the past 10 months.

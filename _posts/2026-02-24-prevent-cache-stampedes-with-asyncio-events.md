@@ -9,6 +9,7 @@ tags:
   - redis
   - caching
   - performance
+  - kuhl-haus-mdp
 ---
 
 ***Learn how a two-layer asyncio.Event and Redis lock strategy eliminates cache-miss stampedes, cutting thousands of redundant Redis calls at market open.***

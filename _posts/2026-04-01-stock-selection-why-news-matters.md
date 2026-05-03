@@ -6,7 +6,7 @@ categories:
 tags:
   - stocks
   - trading
-  - market-data
+  - kuhl-haus-mdp
 ---
 
 In my [first post about Kuhl Haus MDP]({% post_url 2026-01-16-what-i-built-after-quitting-amazon-spoiler-its-a-stock-scanner %}#down-the-day-trading-rabbit-hole), I emphasized that momentum trading strategies rely on real-time information, and I outlined Ross Cameron's "Five Pillars of Stock Selection" as the criteria for what I set out to build. As a refresher, here they are:
