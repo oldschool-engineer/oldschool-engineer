@@ -31,6 +31,9 @@ My pinned repositories showcase a **distributed real-time market data system** I
 > Architecture, module references, contribution guide, security policy, and detailed changelog — because real
 > engineering projects have real documentation.
 
+**Blog Posts**: All of my blog posts related to Kuhl Haus MDP are tagged with `#kuhl-haus-mdp`. You can find them all here: [https://oldschool-engineer.dev/tags/#kuhl-haus-mdp](https://oldschool-engineer.dev/tags/#kuhl-haus-mdp), in reverse chronological order.
+
+
 | Repository | Description |
 |------------|-------------|
 | [kuhl-haus-mdp](https://github.com/kuhl-haus/kuhl-haus-mdp) | Core market data processing library |
