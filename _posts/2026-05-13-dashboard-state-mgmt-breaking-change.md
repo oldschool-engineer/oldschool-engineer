@@ -41,7 +41,7 @@ Here's the part that's actually useful: **export before every upgrade.**
 
 The dashboard has a 📤 Export button that dumps your entire state — layouts, defaults, column counts, the works — into a single JSON file. The export format *is* the import format. No conversion, no ceremony.
 
-I built that button months ago thinking it was a nice-to-have for sharing setups between machines. Turns out it doubled as my own escape hatch when I broke the storage layer.
+I built that button months ago for exactly this kind of scenario and it worked perfectly when I needed it the most.
 
 ### What actually shipped in v0.4.1
 
