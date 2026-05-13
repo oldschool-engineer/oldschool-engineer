@@ -3,7 +3,7 @@ services:
     image: ruby:3.2
     command: >
       bash -c "bundle install &&
-      bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload"
+      bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload --drafts"
     ports:
       - "4000:4000"
       - "35729:35729"
