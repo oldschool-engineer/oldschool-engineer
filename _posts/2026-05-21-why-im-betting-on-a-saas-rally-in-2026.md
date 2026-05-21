@@ -124,10 +124,7 @@ Amodei's "software → free" thesis confuses a _line item_ with a _business_. He
 
 Even Amodei's own audience didn't buy it. CEOs at Davos pushed back on the same stage.[3](https://fortune.com/2026/01/27/at-davos-ceos-said-ai-isnt-coming-for-jobs-as-fast-as-anthropic-ceo-dario-amodei-thinks/), [4](https://fortune.com/2026/01/23/deepmind-demis-hassabis-anthropic-dario-amodei-yann-lecun-ai-davos/)  
 
-Claude being able to generate code doesn't turn a great idea into the next hot SaaS company.  
-
 The companies that already know how to _run_ software at scale are about to eat very well.
-
 
 ---
 
