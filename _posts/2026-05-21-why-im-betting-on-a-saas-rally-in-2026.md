@@ -77,7 +77,7 @@ I've spent most of my career maintaining systems where the _application_ softwar
 - As an SE, I wrote the code that _deployed and operated_ other people's   software — automation, monitoring, pipelines, recovery tooling, the production substrate.
 - As an SDE, I write all of it: application code _and_ the systems code that keeps it alive.
 
-That is why I'm extracting so much value from agentic engineering. **AI saves me a shit ton of typing precisely because of my background.** I know what the right answer looks like, where the failure modes hide, and how the operational pieces snap together. The agent handles the keystrokes. I handle the judgment.
+Which is why I'm extracting so much value from agentic engineering. **AI saves me a shit ton of typing precisely because of my background.** I know what the right answer looks like, where the failure modes hide, and how the operational pieces snap together. The agent handles the keystrokes. I handle the judgment.
 
 ## The Receipts
 
