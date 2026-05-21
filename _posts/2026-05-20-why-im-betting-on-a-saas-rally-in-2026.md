@@ -70,11 +70,11 @@ The "AI killed SaaS" narrative ages like milk.
 I'm not a skeptic from the cheap seats. My career arc:
 
 - **Microsoft:** Systems Engineer → Senior Service Engineer (the role Microsoft later renamed SRE, after I'd left).
-- **Amazon:** Systems Engineer → System Development Engineer → L5 SDE → L6 Senior SDE.
+- **Amazon:** Systems Engineer → System Development Engineer → L5 Software Development Engineer → L6 Senior SDE.
 
 I've spent most of my career maintaining systems where the _application_ software was written by other teams. But I've always written code:
 
-- As an SE, I wrote the code that _deployed and operated_ other people's   software — automation, monitoring, pipelines, recovery tooling, the production substrate.
+- As an SE, I wrote the code that _deployed and operated_ other people's software — automation, monitoring, pipelines, recovery tooling, the production substrate.
 - As an SDE, I write all of it: application code _and_ the systems code that keeps it alive.
 
 Which is why I'm extracting so much value from agentic engineering. **AI saves me a shit ton of typing precisely because of my background.** I know what the right answer looks like, where the failure modes hide, and how the operational pieces snap together. The agent handles the keystrokes. I handle the judgment.
