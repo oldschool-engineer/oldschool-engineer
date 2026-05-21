@@ -1,6 +1,6 @@
 ---
 title: "Why I'm Betting on a SaaS Rally in 2026."
-excerpt: "Dario Amodei says AI will make software free. I've spent $2,600 with his company in four months running two agents in production, and I'm here to tell you the SaaS incumbents are about to eat very well."
+excerpt: "The hype says AI will zero out the cost of software. The market is about to learn that "software" was never the expensive part."
 
 categories:
   - Opinion
@@ -99,7 +99,13 @@ Here's what that's cost me at Anthropic:
 | May 2026 (MTD) | $685 |
 | **Total** | **~$2,641** |
 
-Cheaper than a junior SDE? **Yes.** Lower barrier to entry than hiring? **Maybe.** _Free?_ **Not even close.** The CEO whose company makes software "free" has invoiced me $2,600+ in four months for the privilege.
+Cheaper than a junior SDE? **Yes.**  
+
+Lower barrier to entry than hiring? **Maybe.**  
+
+_Free?_ **Not even close.**  
+
+The CEO whose company makes software "free" has invoiced me $2,600+ in four months for the privilege.
 
 ## Mini-FAQ
 
