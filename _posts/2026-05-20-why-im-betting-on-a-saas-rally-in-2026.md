@@ -1,6 +1,6 @@
 ---
 title: "Why I'm Betting on a SaaS Rally in 2026."
-excerpt: "The hype says AI will zero out the cost of software. The market is about to learn that "software" was never the expensive part."
+excerpt: "The hype says AI will zero out the cost of software. The market is about to learn that 'software' was never the expensive part."
 categories:
   - Opinion
 tags:
@@ -9,6 +9,7 @@ tags:
   - agentic-engineering
   - software-as-a-service
 ---
+
 
 **_The hype says AI will zero out the cost of software. The market is about to learn that "software" was never the expensive part._**
 
