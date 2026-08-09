@@ -10,11 +10,13 @@ minimal_mistakes_skin: "dark"
 # https://mmistakes.github.io/minimal-mistakes/docs/configuration/#site-settings
 locale: "en-US"
 title: "Tom Pounders"
-subtitle: "Senior Engineering Technical Leader"
+subtitle: "Building Internet systems since before the cloud existed"
 name: "Tom Pounders"
 description: >-
-  Senior Engineering Technical Leader with 25+ years building and securing
-  enterprise systems at Amazon/AWS and Microsoft.
+  The public notebook of an old-school engineer — three decades across
+  the U.S. Navy, Microsoft, Amazon/AWS, and ServiceNow. System
+  architecture, security and identity, trading systems, and whatever
+  rabbit hole comes next.
 url: "https://oldschool-engineer.dev"
 baseurl: ""
 
@@ -23,8 +25,10 @@ baseurl: ""
 author:
   name: "Tom Pounders"
   bio: >-
-    25+ years building and securing enterprise systems at Amazon/AWS
-    and Microsoft. 10 years U.S. Navy Signals Intelligence.
+    Old-school engineer. Three decades: U.S. Navy, Microsoft,
+    Amazon/AWS, and ServiceNow. Building and operating Internet
+    systems at planetary scale. Opinions are my own; nothing here
+    is professional advice.
   # Icon names from Font Awesome 5: https://fontawesome.com/v5/search
   links:
     - label: "GitHub"

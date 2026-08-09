@@ -2,9 +2,13 @@
 
 [![](https://img.shields.io/badge/-oldschool_engineer-151515?style=flat&logo=GitHub&logoColor=white)](https://github.com/oldschool-engineer) [![](https://img.shields.io/badge/-Thomas_Pounders-0072b1?style=flat&logo=inspire&logoColor=white)](https://www.linkedin.com/in/thomaspounders) [![](https://img.shields.io/badge/-the.oldschool.engineer-006633?style=flat&logo=medium&logoColor=white)](https://the.oldschool.engineer)
 
-**Senior Engineering Technical Leader** with 25+ years building and securing enterprise systems at **Amazon/AWS** and **Microsoft**, plus 10 years of **U.S. Navy** Signals Intelligence experience.
+Old-school engineer — three decades across the **U.S. Navy**, **Microsoft**, **Amazon/AWS**, and now **ServiceNow**, building and operating Internet systems at planetary scale.
 
-I architect systems that span the entire stack—from network infrastructure and authentication to deployment pipelines and production observability.
+This is my public notebook: system architecture, security and identity, trading systems, and whatever rabbit hole I've fallen into.
+
+*Opinions are my own and do not represent my employer, past or present. Nothing here is professional advice.*
+
+I architect systems that span the entire stack — from network infrastructure and authentication to deployment pipelines and production observability.
 
 ## 🛠️ Core Expertise
 
@@ -94,6 +98,4 @@ nobody wants to live with that. So "oldschool" it is. Roll with it.*
 
 ---
 
-_Looking for someone who can architect secure, scalable systems and ship production code?
-Let's connect._
-
+_This is my public notebook. If any of this is your world too — let's talk shop._
