@@ -7,9 +7,9 @@ Instructions for AI agents assisting with Tom Pounders' personal brand site.
 ## 1. Identity and Mission
 
 **Site:** https://oldschool-engineer.dev
-**Owner:** Tom Pounders — Senior Engineering Technical Leader
+**Owner:** Tom Pounders
 
-Tom has 25+ years building and securing enterprise systems at **Amazon/AWS** and **Microsoft**, plus 10 years of **U.S. Navy Signals Intelligence** experience. He left Amazon as a Senior Software Development Engineer in March 2025.
+Tom is a Principal Engineer (Principal IAM Software Engineer) at ServiceNow. He has three decades of experience: roughly two decades of civilian enterprise engineering at **Amazon/AWS** and **Microsoft**, plus a decade of **U.S. Navy Signals Intelligence** before that. He left Amazon as a Senior Software Development Engineer in March 2025, took a career break (active trading, built Kuhl Haus MDP), and joined ServiceNow in June 2026.
 
 This repository is Tom's personal brand "front door." It contains:
 - The **canonical source** for all his technical writing (blog posts)
@@ -17,6 +17,15 @@ This repository is Tom's personal brand "front door." It contains:
 - Links to every profile he actively maintains
 
 The site must maintain **search dominance** for the query **"tom pounders engineer"**.
+
+### Voice Split — Read This Before Writing Anything
+
+This site (blog, GitHub profile, Medium) and LinkedIn are **deliberately different voices**. Do not homogenize them.
+
+- **LinkedIn** is Tom's professional record: exact HR title (Principal IAM Software Engineer), "Principal Engineer" brand framing, employer-forward. Maintained by Tom directly.
+- **This site + GitHub profile + Medium** are Tom's personal notebook: old-school engineer, geek with credentials, employer-aware but not employer-first. **Never** introduce "organizational leader," "engineering leadership," hiring/recruiter-facing pitches, or job-seeking CTAs here — that framing was retired and belongs on LinkedIn only, if anywhere.
+
+If a task asks you to make this site sound more like a resume or a LinkedIn headline, stop and ask Tom first — that's very likely the wrong direction.
 
 ### Brand Name Rules
 
@@ -115,6 +124,7 @@ Tom's writing voice is the single most important thing to get right. Content tha
 - Write in passive voice when active is clearer
 - Use emojis in post body text (emojis appear only in series nav blocks and README badges)
 - Call Tom a "thought leader", "influencer", or "content creator"
+- Use "engineering leadership," "organizational leader," or any hiring/recruiter-facing pitch — that's LinkedIn's job, not this site's (see Section 1, Voice Split)
 - Add superlatives that Tom wouldn't use ("amazing", "incredible", "game-changing")
 - Use the word "journey" to describe career or project progression
 
@@ -237,7 +247,7 @@ For series posts, append `-part-N`: e.g., `...-part-2.md`, `...-part-3.md`.
 
 ### Tags (existing — prefer these before creating new ones)
 
-`ai`, `ansible`, `asyncio`, `automation`, `aws`, `bedrock`, `brainfuck`, `budget`, `caching`, `career`, `certbot`, `chatbot`, `cost-optimization`, `dad-jokes`, `deployment`, `docker`, `documentation`, `fastapi`, `github-pages`, `home-lab`, `hybrid-cloud`, `infrastructure`, `javascript`, `kubernetes`, `langflow`, `litellm`, `llm`, `market-data`, `mattermost`, `navy`, `networking`, `observability`, `open-source`, `opentelemetry`, `performance`, `personal`, `prompt-engineering`, `proxmox`, `python`, `rabbitmq`, `redis`, `route53`, `site-updates`, `testing`, `tls`, `vibe-coding`, `vue`
+`ai`, `ansible`, `asyncio`, `automation`, `aws`, `bedrock`, `brainfuck`, `budget`, `caching`, `career`, `certbot`, `chatbot`, `cost-optimization`, `dad-jokes`, `deployment`, `docker`, `documentation`, `fastapi`, `github-pages`, `home-lab`, `hybrid-cloud`, `infrastructure`, `javascript`, `kubernetes`, `kuhl-haus-mdp`, `langflow`, `litellm`, `llm`, `market-data`, `mattermost`, `navy`, `networking`, `observability`, `open-source`, `opentelemetry`, `performance`, `personal`, `prompt-engineering`, `proxmox`, `python`, `rabbitmq`, `redis`, `route53`, `site-updates`, `testing`, `tls`, `vibe-coding`, `vue`
 
 ---
 
@@ -388,7 +398,7 @@ Use inline markdown links. Tom frequently links to:
 
 ```bash
 docker compose up
-# Site:       http://localhost:4000
+# Site:       http://localhost:8001
 # LiveReload: port 35729
 ```
 
@@ -448,12 +458,14 @@ Dominate search results for **"tom pounders engineer"**.
 
 When creating content, naturally reinforce these differentiators:
 
-- Amazon/AWS and Microsoft experience (25+ years combined)
-- U.S. Navy Signals Intelligence (10 years)
+- Three decades of experience: U.S. Navy Signals Intelligence, then Microsoft, Amazon/AWS, and now ServiceNow
+- Hands-on experience building and operating Internet systems at planetary scale
 - Home lab: 13-node Proxmox cluster, 42U rack, triple-redundant Internet
 - Open source: kuhl-haus organization, MIT license, real CI/CD and test coverage
 - "Intentional simplicity" philosophy — build the simplest thing that works, measure, iterate
 - Production engineering with real numbers and real metrics (not theoretical)
+
+Employer names (Amazon/AWS, Microsoft, ServiceNow) may appear as plain factual history in body text. They should **not** be bolded, headlined, or led with — see Section 1, Voice Split. This site's brand is the person, not the resume.
 
 ### Canonical URL Strategy
 
@@ -531,21 +543,33 @@ When creating content, naturally reinforce these differentiators:
 
 ### Active Profiles
 
-| Platform | Handle / URL | Purpose |
-|----------|-------------|---------|
-| Blog (canonical) | `https://oldschool-engineer.dev` | Primary content home |
-| GitHub | `https://github.com/oldschool-engineer` | Code, profile README |
-| GitHub (org) | `https://github.com/kuhl-haus` | Open source projects |
-| LinkedIn | `https://www.linkedin.com/in/thomaspounders` | Professional network |
-| Medium | `https://the.oldschool.engineer` | Content distribution |
-| Dad Jokes | `https://ur.janky.click` | Side project |
+| Platform | Handle / URL | Purpose | Voice |
+|----------|-------------|---------|-------|
+| Blog (canonical) | `https://oldschool-engineer.dev` | Primary content home | Personal notebook |
+| GitHub | `https://github.com/oldschool-engineer` | Code, profile README | Personal notebook |
+| GitHub (org) | `https://github.com/kuhl-haus` | Open source projects | Personal notebook |
+| Medium | `https://the.oldschool.engineer` | Content distribution | Personal notebook |
+| LinkedIn | `https://www.linkedin.com/in/thomaspounders` | Professional network | Professional record |
+| Dad Jokes | `https://ur.janky.click` | Side project | N/A |
 
 ### Consistency Requirements
 
-- **Title/headline** across platforms: "Senior Engineering Technical Leader"
-- **Bio** must reference: 25+ years, Amazon/AWS, Microsoft, U.S. Navy Signals Intelligence
-- Profile links should **cross-reference** each other where the platform allows
-- When profile information changes, update **all profiles**
+The **personal-notebook trio** (blog, GitHub profile, Medium) and **LinkedIn** are two separate voice tracks. Do not cross-pollinate them.
+
+**Blog + GitHub + Medium — keep these three in sync with each other:**
+- Identity framing: old-school engineer, geek with credentials. No "leadership," "organizational," or hiring-facing language.
+- History: three decades — U.S. Navy Signals Intelligence, then Microsoft, Amazon/AWS, and now ServiceNow. Employers named once in body text, not bolded or headlined.
+- Signature phrase: "building and operating Internet systems at planetary scale" — reuse it, it's load-bearing (it echoes the origin story in the README's "Why oldschool-engineer?" section).
+- Disclaimer, present on all three: opinions are personal and don't represent any employer, past or present; nothing here is professional advice (needed because of trading content).
+- No job-seeking CTA. Tom is not looking for a role.
+
+**LinkedIn — maintained by Tom directly, deliberately different:**
+- Exact HR title where precision matters (e.g., "Principal IAM Software Engineer" on the experience entry).
+- Headline and About use "Principal Engineer" brand framing, employer-forward is fine there.
+- Agents should not attempt to rewrite LinkedIn copy to match the blog's geek-notebook voice, or vice versa.
+
+- Profile links should **cross-reference** each other where the platform allows (links are fine across voice tracks; prose style is not).
+- When updating brand copy, change the blog/GitHub/Medium trio together. Do not touch LinkedIn copy without Tom's explicit direction — he treats it as a separate, hands-on-maintained surface.
 
 ### README.md Special Rules
 
@@ -555,6 +579,7 @@ This file serves double duty as both the GitHub profile page and the Jekyll home
 - Must render correctly on **both** GitHub (as profile) and Jekyll (as homepage).
 - Uses GitHub badge shields (`img.shields.io`) for profile link badges.
 - Featured project section currently highlights **Kuhl Haus MDP** — update when major projects change.
+- Hero paragraph and closing CTA must follow the Voice Split rule in Section 1 — no leadership/hiring framing, no bolded employer names in the identity line.
 
 ---
 
@@ -606,7 +631,7 @@ assets/images/posts/{post-slug}/img-NN.ext
 
 ```bash
 docker compose up
-# Site: http://localhost:4000
+# Site: http://localhost:8001
 ```
 
 ### Post Filename Convention
